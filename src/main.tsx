@@ -6,5 +6,5 @@ import RouteConfig from "./components/RouteConfig.tsx";
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <RouteConfig />
-  </StrictMode>,
+  </StrictMode>
 )
