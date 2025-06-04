@@ -10,10 +10,14 @@ function DarkModeToggle() {
     getCookie("theme") == 'dark' ? faMoon : faSun
   );
 
+  const setButtonIcon = (cvalue: string) => {
+    setIcon(cvalue == 'dark' ? faMoon : faSun);
+  }
+
   const switchTheme = () => {
     document.documentElement.style.colorScheme = getCookie("theme") == 'dark' ? 'light' : 'dark';
     setCookie("theme", document.documentElement.style.colorScheme);
-    setIcon(getCookie("theme") == 'dark' ? faMoon : faSun);
+    setButtonIcon(getCookie("theme") as string);
   }
 
   const handleChange = (event: MediaQueryListEvent) => {
@@ -21,10 +25,12 @@ function DarkModeToggle() {
   };
 
   useEffect(() => {
-    if(typeof getCookie('theme') !== 'undefined')
-      document.documentElement.style.colorScheme = getCookie("theme") as string;
-    setIcon(getCookie("theme") == 'dark' ? faMoon : faSun);
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    if(typeof getCookie('theme') === 'undefined') {
+      setCookie('theme', mediaQuery.matches ? 'dark' : 'light')
+    }
+    document.documentElement.style.colorScheme = getCookie("theme") as string;
+    setButtonIcon(getCookie("theme") as string);
     mediaQuery.addEventListener("change", handleChange);
     return () => {
       mediaQuery.removeEventListener("change", handleChange);
