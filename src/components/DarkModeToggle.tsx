@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMoon, faSun} from "@fortawesome/free-regular-svg-icons";
 import type {IconDefinition} from "@fortawesome/fontawesome-svg-core";
@@ -13,29 +13,29 @@ function DarkModeToggle() {
   const setButtonIcon = (cvalue: string) => {
     setIcon(cvalue == 'dark' ? faMoon : faSun);
   }
-
-  const switchTheme = () => {
-    document.documentElement.style.colorScheme = getCookie("theme") == 'dark' ? 'light' : 'dark';
-    setCookie("theme", document.documentElement.style.colorScheme);
-    setButtonIcon(getCookie("theme") as string);
-  }
-
-  const handleChange = (event: MediaQueryListEvent) => {
-    setCookie('theme', event.matches ? 'dark' : 'light')
-  };
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    if(typeof getCookie('theme') === 'undefined') {
-      setCookie('theme', mediaQuery.matches ? 'dark' : 'light')
-    }
+  
+  const setTheme = useCallback(() => {
     document.documentElement.style.colorScheme = getCookie("theme") as string;
     setButtonIcon(getCookie("theme") as string);
-    mediaQuery.addEventListener("change", handleChange);
-    return () => {
-      mediaQuery.removeEventListener("change", handleChange);
+  }, [])
+
+  const switchTheme = () => {
+    setCookie("theme", getCookie("theme") == 'dark' ? 'light' : 'dark');
+    setTheme();
+  }
+
+  useEffect(() => {
+    const setThemeToSystem = (event: MediaQueryListEvent | MediaQueryList) => {
+      setCookie('theme', event.matches ? 'dark' : 'light');
+      setTheme();
     };
-  }, []);
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    mediaQuery.addEventListener("change", setThemeToSystem);
+    if(typeof getCookie('theme') === 'undefined') setThemeToSystem(mediaQuery);
+    return () => {
+      mediaQuery.removeEventListener("change", setThemeToSystem);
+    };
+  }, [setTheme]);
 
   return (
     <button onClick={switchTheme}>
