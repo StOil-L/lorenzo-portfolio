@@ -38,8 +38,13 @@ function CarouselWrapper(props: CarouselWrapperProps) {
   }, [isStopped])
 
   useEffect(() => {
-
-  }, [currentSlide]);
+    dotsRef.current.forEach((dot: HTMLSpanElement, i: number) => {
+      dot.addEventListener('click', () => slideTo(i))
+    })
+    return dotsRef.current.forEach((dot: HTMLSpanElement, i: number) => {
+      dot.removeEventListener('click', () => slideTo(i))
+    })
+  }, []);
 
   return props.slides.length > 0 && (
     <div className="carousel"
@@ -48,8 +53,8 @@ function CarouselWrapper(props: CarouselWrapperProps) {
          onTouchStart={(event) => startX.current = event.touches[0].clientX}
          onTouchEnd={(event) => {
            endX.current = event.changedTouches[0].clientX;
-           if(startX.current > endX.current + 0.1*window.screen.width) slideTo(++currentSlide.current);
-           else if(startX.current < endX.current - 0.1*window.screen.width) slideTo(--currentSlide.current);
+           if(startX.current > endX.current + 0.2*window.screen.width) slideTo(++currentSlide.current);
+           else if(startX.current < endX.current - 0.2*window.screen.width) slideTo(--currentSlide.current);
          }}
     >
       <div className="carousel-content">

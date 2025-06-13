@@ -9,7 +9,6 @@ export interface CarouselDotProps {
 
 function CarouselDot(props: CarouselDotProps) {
   return (
-    // TODO: rendre les points cliquables (depuis CarouselWrapper)
     <span ref={props.ref} data-slideid={props.index} className={"dot " + props.activeClass} />
   )
 }
