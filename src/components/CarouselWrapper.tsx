@@ -21,7 +21,6 @@ function CarouselWrapper(props: CarouselWrapperProps) {
 
   const slideTo = (index: number) => {
     currentSlide.current = index >= props.slides.length ? 0 : (index < 0 ? props.slides.length-1 : index);
-    console.log("Slide id: " + currentSlide);
     slidesRef.current.forEach((slide) => {
       slide.style.transform = `translateX(-${100*currentSlide.current}%)`;
     })
@@ -61,7 +60,8 @@ function CarouselWrapper(props: CarouselWrapperProps) {
         {props.slides.map((slide: CarouselSlideProps, i: number) => {
           return <CarouselSlide key={i} ref={(elt) => {
             if (elt) slidesRef.current[i] = elt;
-          }} url={slide.url} alt={slide.alt} />
+          }} imgurl={slide.imgurl} imgalt={slide.imgalt} title={slide.title}
+                                description={slide.description} link={slide.link} />
         })}
       </div>
       <div className="carousel-controls">
