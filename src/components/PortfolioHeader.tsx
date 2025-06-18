@@ -1,3 +1,5 @@
+import '../stylesheets/PortfolioHeader.css'
+
 type PortfolioHeaderProps = {
   children: string
 };

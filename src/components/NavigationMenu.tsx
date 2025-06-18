@@ -4,9 +4,10 @@ import DarkModeToggle from "./DarkModeToggle.tsx";
 function NavigationMenu() {
   return (
     <nav>
-      <Link to="aboutme">A propos de moi</Link> {'\t'}
-      <Link to="projects">Projets</Link> {'\t'}
-      <Link to="certifications">Certifications</Link> {'\t'}
+      <Link to="">Accueil</Link>
+      <Link to="aboutme">A propos de moi</Link>
+      <Link to="projects">Projets</Link>
+      <Link to="certifications">Certifications</Link>
       <DarkModeToggle />
     </nav>
   )

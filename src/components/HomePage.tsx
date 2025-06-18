@@ -1,17 +1,17 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import './stylesheets/App.css'
-import PortfolioHeader from "./components/PortfolioHeader.tsx";
-import CarouselWrapper from "./components/CarouselWrapper.tsx";
-import {testCarousel} from "./assets/carousel/TestCarousel.ts";
+import '../stylesheets/HomePage.css'
+import PortfolioHeader from "./PortfolioHeader.tsx";
+import CarouselWrapper from "./CarouselWrapper.tsx";
+import {testCarousel} from "../assets/carousel/TestCarousel.ts";
 
-function App() {
+function HomePage() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <PortfolioHeader>Better Call StOil!</PortfolioHeader>
+      <PortfolioHeader>Lorenzo PUCCIO</PortfolioHeader>
       {/*<div>*/}
       {/*  <a href="https://vite.dev" target="_blank">*/}
       {/*    <img src={viteLogo} className="logo" alt="Vite logo" />*/}
@@ -26,7 +26,7 @@ function App() {
       {/*    count is {count}*/}
       {/*  </button>*/}
       {/*  <p>*/}
-      {/*    Edit <code>src/App.tsx</code> and save to test HMR*/}
+      {/*    Edit <code>src/HomePage.tsx</code> and save to test HMR*/}
       {/*  </p>*/}
       {/*</div>*/}
       {/*<p className="read-the-docs">*/}
@@ -37,4 +37,4 @@ function App() {
   )
 }
 
-export default App
+export default HomePage
