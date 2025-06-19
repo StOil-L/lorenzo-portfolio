@@ -2,7 +2,7 @@ import PortfolioHeader from "../layouts/PortfolioHeader.tsx";
 
 function ProjectsPage() {
   return (
-    <PortfolioHeader>Formation</PortfolioHeader>
+    <PortfolioHeader>Projets</PortfolioHeader>
   )
 }
 
