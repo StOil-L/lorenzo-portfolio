@@ -1,4 +1,4 @@
-import '../stylesheets/MainLayout.css'
+import '../../stylesheets/MainLayout.css'
 import NavigationMenu from "./NavigationMenu.tsx";
 import {Outlet} from "react-router";
 

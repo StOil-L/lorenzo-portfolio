@@ -1,10 +1,10 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import '../stylesheets/HomePage.css'
-import PortfolioHeader from "./PortfolioHeader.tsx";
-import CarouselWrapper from "./CarouselWrapper.tsx";
-import {testCarousel} from "../assets/carousel/TestCarousel.ts";
+import '../../stylesheets/HomePage.css'
+import PortfolioHeader from "../layouts/PortfolioHeader.tsx";
+import CarouselWrapper from "../carousel/CarouselWrapper.tsx";
+import {testCarousel} from "../../assets/carousel/TestCarousel.ts";
 
 function HomePage() {
   // const [count, setCount] = useState(0)

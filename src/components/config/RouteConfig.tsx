@@ -1,6 +1,6 @@
 import {BrowserRouter, Route, Routes} from "react-router";
-import HomePage from "./HomePage.tsx";
-import MainLayout from "./MainLayout.tsx";
+import HomePage from "../pages/HomePage.tsx";
+import MainLayout from "../layouts/MainLayout.tsx";
 
 function RouteConfig() {
   return (

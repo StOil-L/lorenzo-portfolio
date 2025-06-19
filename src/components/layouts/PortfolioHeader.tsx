@@ -1,4 +1,4 @@
-import '../stylesheets/PortfolioHeader.css'
+import '../../stylesheets/PortfolioHeader.css'
 
 type PortfolioHeaderProps = {
   children: string

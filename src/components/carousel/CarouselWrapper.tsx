@@ -1,4 +1,4 @@
-import '../stylesheets/CarouselWrapper.css';
+import '../../stylesheets/CarouselWrapper.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleLeft, faCircleRight} from "@fortawesome/free-regular-svg-icons";
 import {CarouselSlide, type CarouselSlideProps} from "./CarouselSlide.tsx";

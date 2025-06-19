@@ -1,4 +1,4 @@
-import "../stylesheets/CarouselSlide.css";
+import "../../stylesheets/CarouselSlide.css";
 import * as React from "react";
 
 export interface CarouselSlideProps extends React.HTMLAttributes<HTMLDivElement> {

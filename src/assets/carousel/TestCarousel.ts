@@ -1,4 +1,4 @@
-import type {CarouselSlideProps} from "../../components/CarouselSlide.tsx";
+import type {CarouselSlideProps} from "../../components/carousel/CarouselSlide.tsx";
 
 export const testCarousel: CarouselSlideProps[] = [
   {

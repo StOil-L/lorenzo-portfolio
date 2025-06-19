@@ -1,4 +1,4 @@
-import "../stylesheets/CarouselDot.css";
+import "../../stylesheets/CarouselDot.css";
 import * as React from "react";
 
 export interface CarouselDotProps {
