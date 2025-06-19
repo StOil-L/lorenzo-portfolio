@@ -7,7 +7,9 @@ function NavigationMenu() {
       <Link to="">Accueil</Link>
       <Link to="aboutme">A propos de moi</Link>
       <Link to="projects">Projets</Link>
-      <Link to="certifications">Certifications</Link>
+      <Link to="education">Formation</Link>
+      <Link to="interests">Centres d'intérêt</Link>
+      <Link to="contact">Contact</Link>
       <DarkModeToggle />
     </nav>
   )
