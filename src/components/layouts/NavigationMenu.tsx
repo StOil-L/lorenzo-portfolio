@@ -1,5 +1,5 @@
 import {Link} from "react-router";
-import DarkModeToggle from "../DarkModeToggle.tsx";
+import DarkModeToggle from "./DarkModeToggle.tsx";
 
 function NavigationMenu() {
   return (

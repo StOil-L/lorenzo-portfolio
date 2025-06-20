@@ -2,7 +2,9 @@ import PortfolioHeader from "../layouts/PortfolioHeader.tsx";
 
 function AboutMePage() {
   return (
-    <PortfolioHeader>A propos de moi</PortfolioHeader>
+    <>
+      <PortfolioHeader>A propos de moi</PortfolioHeader>
+    </>
   )
 }
 

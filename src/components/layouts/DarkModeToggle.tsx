@@ -2,7 +2,7 @@ import {useCallback, useEffect, useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMoon, faSun} from "@fortawesome/free-regular-svg-icons";
 import type {IconDefinition} from "@fortawesome/fontawesome-svg-core";
-import {getCookie, setCookie} from "../util/cookies.ts";
+import {getCookie, setCookie} from "../../util/cookies.ts";
 
 function DarkModeToggle() {
 
