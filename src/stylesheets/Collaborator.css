@@ -1,0 +1,11 @@
+.collaborator {
+    padding: 1rem;
+}
+
+.collaborator img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border-color: var(--nav-color);
+    border-width: thick;
+}

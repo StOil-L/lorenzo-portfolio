@@ -1,5 +1,13 @@
+.technology {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    overflow: visible;
+}
+
 .technology img {
-    aspect-ratio: auto;
-    max-width: 4rem;
-    max-height: 4rem;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
 }

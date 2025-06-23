@@ -105,7 +105,7 @@ export const technologies: TechnologyProps[] = [
   },
   {
     name: "MySQL",
-    icon: 'https://labs.mysql.com/common/themes/sakila/favicon.ico',
+    icon: 'https://www.svgrepo.com/show/354099/mysql.svg',
   },
   {
     name: "Docker",
