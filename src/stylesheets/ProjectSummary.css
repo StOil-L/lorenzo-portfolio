@@ -30,40 +30,19 @@
 .collaborators, .technologies {
     display: flex;
     justify-content: flex-start;
-}
-
-.collaborator, .technology {
-    padding-right: 1rem;
-    padding-left: 1rem;
-    text-align: center;
-}
-
-.technology {
-    height: 4rem;
-    display: flex;
-    overflow: visible;
-}
-
-.technology img {
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    width: auto;
-}
-
-.highlight:hover, .technology svg:hover {
-    transition: .2s;
-    filter: brightness(0) invert(1) drop-shadow(0 0 .5rem black);
-}
-
-.technology img:hover:not(.highlight) {
-    transition: .2s;
-    filter: drop-shadow(0 0 .5rem black);
+    flex-wrap: wrap;
 }
 
 .collaborator {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-align: center;
     width: min-content;
 }
+
+/*.collaborator {*/
+/*    width: min-content;*/
+/*}*/
 
 .collaborator img {
     width: 6rem;
