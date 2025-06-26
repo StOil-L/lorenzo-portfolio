@@ -1,6 +1,7 @@
 import type {TechnologyProps} from "../../components/Technology.tsx";
 import {
-  faCss3Alt, faDocker,
+  faAngular,
+  faCss3Alt, faDartLang, faDocker, faFlutter,
   faGitAlt,
   faGolang,
   faHtml5,
@@ -145,7 +146,7 @@ export const technologies: TechnologyProps[] = [
   },
   {
     name: "TensorFlow",
-    icon: 'https://www.gstatic.com/devrel-devsite/prod/va55008f56463f12ba1a0c4ec3fdc81dac4d4d331f95ef7b209d2570e7d9e879b/tensorflow/images/favicon.png',
+    icon: 'https://avatars.githubusercontent.com/u/15658638?s=280&v=4',
     highlight: true,
   },
   {
@@ -160,6 +161,47 @@ export const technologies: TechnologyProps[] = [
     name: "NLTK",
     icon: 'technologies/nltk.png',
     highlight: true,
+  },
+  {
+    name: "C",
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg',
+  },
+  {
+    name: "C++",
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg',
+  },
+  {
+    name: "MongoDB",
+    icon: 'technologies/mongodb-logo.svg',
+  },
+  {
+    name: "Express.js",
+    icon: 'technologies/express-js-icon.svg',
+  },
+  {
+    name: "Angular",
+    icon: faAngular,
+    color: 'DD0031',
+  },
+  {
+    name: "Dart",
+    icon: faDartLang,
+    color: '2CB7F6',
+  },
+  {
+    name: "Flutter",
+    icon: faFlutter,
+    color: '32B9F6',
+  },
+  {
+    name: "Qt",
+    icon: 'technologies/qt.svg',
+    highlight: true,
+  },
+  {
+    name: "LaTeX",
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg',
+    highlight: true,
   }
 ]
 
@@ -173,11 +215,16 @@ export const language = new Map<string, TechnologyProps>([
   ["PHP", technologies[18]],
   ["TypeScript", technologies[23]],
   ["Python", technologies[26]],
+  ["C", technologies[31]],
+  ["C++", technologies[32]],
+  ["Dart", technologies[36]],
+  ["LaTeX", technologies[39]],
 ]);
 
 export const database = new Map<string, TechnologyProps>([
   ["PostgreSQL", technologies[5]],
   ["MySQL", technologies[20]],
+  ["MongoDB", technologies[33]],
 ]);
 
 export const backend = new Map<string, TechnologyProps>([
@@ -186,12 +233,14 @@ export const backend = new Map<string, TechnologyProps>([
   ["Hibernate", technologies[4]],
   ["Node.js", technologies[11]],
   ["Symfony", technologies[25]],
+  ["Express.js", technologies[34]],
 ]);
 
 export const frontend = new Map<string, TechnologyProps>([
   ["React", technologies[9]],
   ["Redux", technologies[10]],
   ["Vite", technologies[24]],
+  ["Angular", technologies[35]],
 ]);
 
 export const devops = new Map<string, TechnologyProps>([
@@ -212,9 +261,14 @@ export const ai = new Map<string, TechnologyProps>([
 export const ide = new Map<string, TechnologyProps>([
   ["Android Studio", technologies[19]],
   ["Arduino IDE", technologies[22]],
+  ["Qt", technologies[38]],
 ]);
 
 export const os = new Map<string, TechnologyProps>([
   ["Linux", technologies[13]],
+]);
+
+export const sdk = new Map<string, TechnologyProps>([
+  ["Flutter", technologies[37]],
 ]);
 
