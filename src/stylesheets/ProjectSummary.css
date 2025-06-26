@@ -4,13 +4,23 @@
 }
 
 .project-summary.alt {
-    background-color: light-dark(var(--light-project-summary-alt-color), var(--dark-project-summary-alt-color));
+    background-color: light-dark(var(--dark-text-color), var(--light-text-color));
 }
 
 .project-summary a:not(.profilepage) {
+    margin-top: 1.5rem;
     display: inline-block;
-    margin-top: .75rem;
-    margin-bottom: .75rem;
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    color: light-dark(var(--dark-text-color), var(--light-text-color));
+    background-color: light-dark(var(--dark-background-color), var(--light-background-color));
+    cursor: pointer;
+}
+
+.project-summary a:not(.profilepage):hover {
+    transition: .2s;
+    background-color: var(--nav-color);
+    color: white;
 }
 
 .project-summary h4:not(.collaborator-name) {
