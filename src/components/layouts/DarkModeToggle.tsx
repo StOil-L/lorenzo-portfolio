@@ -31,7 +31,7 @@ function DarkModeToggle() {
     };
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     mediaQuery.addEventListener("change", setThemeToSystem);
-    if(typeof getCookie('theme') === 'undefined') setThemeToSystem(mediaQuery);
+    if(typeof getCookie('theme') === 'undefined') setThemeToSystem(mediaQuery); else setTheme();
     return () => {
       mediaQuery.removeEventListener("change", setThemeToSystem);
     };
