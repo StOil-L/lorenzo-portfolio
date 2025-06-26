@@ -1,6 +1,6 @@
 #page-content {
     display: inline-block;
-    text-align: left;
+    text-align: justify;
     padding: 2rem;
     margin-left: 4%;
     margin-right: 4%;
@@ -26,4 +26,8 @@ nav a {
 
 nav a:hover {
     color: #C0D0F8;
+}
+
+h1 {
+    text-align: center;
 }

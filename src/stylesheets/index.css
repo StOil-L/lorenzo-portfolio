@@ -6,12 +6,16 @@
   /* Sombre */
   --dark-background-color: #383030;
   --dark-text-color: #C0D0F8;
+  --dark-link-color: #5890F8;
   --dark-link-hover-color: #A088F8;
+  --dark-project-summary-alt-color: #183858;
 
   /* Clair */
   --light-background-color: white;
   --light-text-color: #183858;
+  --light-link-color: #0070E8;
   --light-link-hover-color: #38B8F8;
+  --light-project-summary-alt-color: #C0D0F8;
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -29,7 +33,7 @@
 
 a {
   font-weight: 500;
-  color: #0070E8;
+  color: light-dark(var(--light-link-color), var(--dark-link-color));
   text-decoration: inherit;
 }
 a:hover {
@@ -56,7 +60,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: light-dark(#f9f9f9, #1a1a1a);
+  background-color: light-dark(var(--light-background-color), var(--dark-background-color));
   cursor: pointer;
   transition: border-color 0.25s;
 }

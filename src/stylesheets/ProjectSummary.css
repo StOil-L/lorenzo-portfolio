@@ -1,0 +1,62 @@
+.project-summary {
+    padding: 1.5rem;
+    border-top: 2px solid #707070;
+}
+
+.project-summary.alt {
+    background-color: light-dark(var(--light-project-summary-alt-color), var(--dark-project-summary-alt-color));
+}
+
+.project-summary a:not(.profilepage) {
+    display: inline-block;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+
+.project-summary h4:not(.collaborator-name) {
+    margin-top: 1rem;
+}
+
+.collaborators, .technologies {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.collaborator, .technology {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-align: center;
+}
+
+.technology {
+    height: 4rem;
+    display: flex;
+    overflow: visible;
+}
+
+.technology img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+.highlight:hover, .technology svg:hover {
+    transition: .2s;
+    filter: brightness(0) invert(1) drop-shadow(0 0 .5rem black);
+}
+
+.technology img:hover:not(.highlight) {
+    transition: .2s;
+    filter: drop-shadow(0 0 .5rem black);
+}
+
+.collaborator {
+    width: min-content;
+}
+
+.collaborator img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}

@@ -95,6 +95,7 @@ export const projects: ProjectSummaryProps[] = [
       language.get("TypeScript"),
       frontend.get("React"),
       frontend.get("Vite"),
+      devops.get("ESLint"),
     ] as TechnologyProps[],
     link: 'https://github.com/StOil-L/lorenzo-portfolio'
   }

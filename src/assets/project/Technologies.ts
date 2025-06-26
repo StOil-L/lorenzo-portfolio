@@ -21,18 +21,22 @@ export const technologies: TechnologyProps[] = [
   {
     name: "Spring Boot",
     icon: 'https://spring.io/img/projects/spring-boot.svg',
+    highlight: true,
   },
   {
     name: "Spring Batch",
     icon: 'https://spring.io/img/projects/spring-batch.svg',
+    highlight: true,
   },
   {
     name: "SonarQube Server",
-    icon: '', // TODO Ajouter icone SonarQube Server
+    icon: 'technologies/sonarqube-server-logo-3.svg',
+    highlight: true,
   },
   {
     name: "Hibernate",
     icon: 'technologies/hibernate-icon.svg',
+    highlight: true,
   },
   {
     name: "PostreSQL",
@@ -56,10 +60,12 @@ export const technologies: TechnologyProps[] = [
   {
     name: "React",
     icon: 'technologies/react.svg',
+    highlight: true,
   },
   {
     name: "Redux",
     icon: 'https://grafikart.fr/uploads/icons/redux.svg',
+    highlight: true,
   },
   {
     name: "Node.js",
@@ -69,6 +75,7 @@ export const technologies: TechnologyProps[] = [
   {
     name: "ESLint",
     icon: 'https://fr.eslint.org/favicon.ico',
+    highlight: true,
   },
   {
     name: "Linux",
@@ -83,6 +90,7 @@ export const technologies: TechnologyProps[] = [
   {
     name: "Rocq",
     icon: 'technologies/logo-rocq-orange.svg',
+    highlight: true,
   },
   {
     name: "HTML",
@@ -101,11 +109,12 @@ export const technologies: TechnologyProps[] = [
   },
   {
     name: "Android Studio",
-    icon: '', //TODO: Ajouter icone Android Studio
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Android_Studio_Icon_3.6.svg',
   },
   {
     name: "MySQL",
     icon: 'https://www.svgrepo.com/show/354099/mysql.svg',
+    highlight: true,
   },
   {
     name: "Docker",
@@ -137,6 +146,7 @@ export const technologies: TechnologyProps[] = [
   {
     name: "TensorFlow",
     icon: 'https://www.gstatic.com/devrel-devsite/prod/va55008f56463f12ba1a0c4ec3fdc81dac4d4d331f95ef7b209d2570e7d9e879b/tensorflow/images/favicon.png',
+    highlight: true,
   },
   {
     name: "scikit-learn",
@@ -149,6 +159,7 @@ export const technologies: TechnologyProps[] = [
   {
     name: "NLTK",
     icon: 'technologies/nltk.png',
+    highlight: true,
   }
 ]
 
