@@ -1,5 +1,5 @@
-import type {EducationSummaryProps} from "../components/EducationSummary.tsx";
-import type {TechnologyProps} from "../components/Technology.tsx";
+import type {EducationSummaryProps} from "../components/summary/EducationSummary.tsx";
+import type {TechnologyProps} from "../components/summary/Technology.tsx";
 import {ai, backend, database, devops, frontend, ide, language, os, sdk} from "./project/Technologies.ts";
 
 //TODO: ajouter descriptions / imgsrcs formations
@@ -15,7 +15,7 @@ export const education: EducationSummaryProps[] = [
       os.get("Windows"),
     ] as TechnologyProps[],
     results: "14.20 / 20 de moyenne, mention Bien",
-    obtentionDate: new Date(2019, 9),
+    obtentionDate: new Date(2019, 7, 22),
   },
   {
     title: "Licence Informatique",
@@ -40,7 +40,7 @@ export const education: EducationSummaryProps[] = [
       os.get("Linux"),
     ] as TechnologyProps[],
     results: "12 / 20 de moyenne, mention Assez Bien",
-    obtentionDate: new Date(2022, 10),
+    obtentionDate: new Date(2022, 11, 9),
   },
   {
     title: "Cursus Master en Ingénierie",
