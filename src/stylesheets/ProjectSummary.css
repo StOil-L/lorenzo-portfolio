@@ -1,33 +1,8 @@
-.project-summary {
-    padding: 1.5rem;
-    border-top: 2px solid #707070;
-}
-
-.project-summary.alt {
-    background-color: light-dark(var(--dark-text-color), var(--light-text-color));
-}
-
-.project-summary a:not(.profilepage) {
-    margin-top: 1.5rem;
-    display: inline-block;
-    border-radius: 8px;
-    padding: 0.6em 1.2em;
-    color: light-dark(var(--dark-text-color), var(--light-text-color));
-    background-color: light-dark(var(--dark-background-color), var(--light-background-color));
-    cursor: pointer;
-}
-
-.project-summary a:not(.profilepage):hover {
-    transition: .2s;
-    background-color: var(--nav-color);
-    color: white;
-}
-
-.project-summary h4:not(.collaborator-name) {
+.summary h4:not(.collaborator-name) {
     margin-top: 1rem;
 }
 
-.collaborators, .technologies {
+.collaborators {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -39,10 +14,6 @@
     text-align: center;
     width: min-content;
 }
-
-/*.collaborator {*/
-/*    width: min-content;*/
-/*}*/
 
 .collaborator img {
     width: 6rem;

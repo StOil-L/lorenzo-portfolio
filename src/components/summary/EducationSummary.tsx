@@ -1,4 +1,3 @@
-import '../stylesheets/EducationSummary.css';
 import Technology, {type TechnologyProps} from "./Technology.tsx";
 
 export interface EducationSummaryProps {
@@ -22,7 +21,7 @@ const localDateOptions: Intl.DateTimeFormatOptions = {
 
 function EducationSummary(props: EducationSummaryProps) {
   return (
-    <div className={`education-summary${props.isAlt ? ' alt' : ''}`}>
+    <div className={`summary${props.isAlt ? ' alt' : ''}`}>
       <section>
         <h2>{props.title}</h2>
         {props.school && (<h3>{props.school}{props.city && `, ${props.city}`}</h3>)}

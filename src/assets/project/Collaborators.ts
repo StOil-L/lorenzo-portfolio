@@ -1,4 +1,4 @@
-import type {CollaboratorProps} from "../../components/Collaborator.tsx";
+import type {CollaboratorProps} from "../../components/summary/Collaborator.tsx";
 
 const collabarray: CollaboratorProps[] = [
   {

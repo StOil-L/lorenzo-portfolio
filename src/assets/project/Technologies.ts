@@ -1,4 +1,4 @@
-import type {TechnologyProps} from "../../components/Technology.tsx";
+import type {TechnologyProps} from "../../components/summary/Technology.tsx";
 import {
   faAngular,
   faCss3Alt, faDartLang, faDocker, faFlutter,

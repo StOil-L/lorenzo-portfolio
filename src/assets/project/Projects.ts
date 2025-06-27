@@ -1,7 +1,7 @@
-import type {ProjectSummaryProps} from "../../components/ProjectSummary.tsx";
+import type {ProjectSummaryProps} from "../../components/summary/ProjectSummary.tsx";
 import collaborators from "./Collaborators.ts";
-import type {CollaboratorProps} from "../../components/Collaborator.tsx";
-import type {TechnologyProps} from "../../components/Technology.tsx";
+import type {CollaboratorProps} from "../../components/summary/Collaborator.tsx";
+import type {TechnologyProps} from "../../components/summary/Technology.tsx";
 import {backend, database, devops, frontend, ide, language, os} from "./Technologies.ts";
 
 export const projects: ProjectSummaryProps[] = [
@@ -90,7 +90,7 @@ export const projects: ProjectSummaryProps[] = [
   {
     title: 'Portfolio',
     description: 'Le site web sur lequel vous êtes en train de lire ce texte est mon portfolio. Il sert de point ' +
-      'd\'entrée aux recruteurs afin d\'en savoir plus sur moi, mes projets et mes centres d\'intérêt.',
+      'd\'entrée aux recruteurs afin d\'en savoir plus sur moi, mes projets et mon expérience professionnelle.',
     technologies: [
       language.get("TypeScript"),
       frontend.get("React"),

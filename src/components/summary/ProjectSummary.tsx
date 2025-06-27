@@ -1,4 +1,4 @@
-import '../stylesheets/ProjectSummary.css';
+import '../../stylesheets/ProjectSummary.css';
 import Collaborator, {type CollaboratorProps} from "./Collaborator.tsx";
 import Technology, {type TechnologyProps} from "./Technology.tsx";
 
@@ -14,7 +14,7 @@ export interface ProjectSummaryProps {
 
 function ProjectSummary(props: ProjectSummaryProps) {
   return (
-    <div className={`project-summary${props.isAlt ? ' alt' : ''}`}>
+    <div className={`summary${props.isAlt ? ' alt' : ''}`}>
       <section>
         <h2>{props.title}</h2>
         {props.imgsrc && (

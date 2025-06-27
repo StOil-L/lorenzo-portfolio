@@ -1,13 +1,13 @@
-.education-summary {
+.summary {
     padding: 1.5rem;
     border-top: 2px solid #707070;
 }
 
-.education-summary.alt {
+.summary.alt {
     background-color: light-dark(var(--dark-text-color), var(--light-text-color));
 }
 
-.education-summary a {
+.summary a:not(.profilepage) {
     margin-top: 1.5rem;
     display: inline-block;
     border-radius: 8px;
@@ -15,6 +15,12 @@
     color: light-dark(var(--dark-text-color), var(--light-text-color));
     background-color: light-dark(var(--dark-background-color), var(--light-background-color));
     cursor: pointer;
+}
+
+.summary a:not(.profilepage):hover {
+    transition: .2s;
+    background-color: var(--nav-color);
+    color: white;
 }
 
 .technologies {

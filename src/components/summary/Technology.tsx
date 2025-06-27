@@ -1,4 +1,4 @@
-import '../stylesheets/Technology.css';
+import '../../stylesheets/Technology.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import type {IconDefinition} from "@fortawesome/fontawesome-svg-core";
 

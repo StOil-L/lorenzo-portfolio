@@ -1,4 +1,5 @@
 import '../../stylesheets/MainLayout.css'
+import '../../stylesheets/Summary.css'
 import NavigationMenu from "./NavigationMenu.tsx";
 import {Outlet} from "react-router";
 import CookiesNotice from "./CookiesNotice.tsx";
