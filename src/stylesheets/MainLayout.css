@@ -31,3 +31,29 @@ nav a:hover {
 h1 {
     text-align: center;
 }
+
+#cookies-notice {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: light-dark(black, white);
+    box-sizing: border-box;
+    color: light-dark(white, black);
+    border-top: solid thick var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    z-index: 100;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.buttons button {
+    background-color: black;
+    color: white;
+    margin-left: 1rem;
+}
