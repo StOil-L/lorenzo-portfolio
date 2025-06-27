@@ -9,7 +9,7 @@ import {
   faJenkins,
   faJs,
   faLinux,
-  faNodeJs, faPhp, faPython, faSymfony
+  faNodeJs, faPhp, faPython, faSymfony, faWindows
 } from "@fortawesome/free-brands-svg-icons";
 
 
@@ -173,10 +173,12 @@ export const technologies: TechnologyProps[] = [
   {
     name: "MongoDB",
     icon: 'technologies/mongodb-logo.svg',
+    highlight: true,
   },
   {
     name: "Express.js",
     icon: 'technologies/express-js-icon.svg',
+    highlight: true,
   },
   {
     name: "Angular",
@@ -202,6 +204,11 @@ export const technologies: TechnologyProps[] = [
     name: "LaTeX",
     icon: 'https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg',
     highlight: true,
+  },
+  {
+    name: "Windows",
+    icon: faWindows,
+    color: '00BCF4',
   }
 ]
 
@@ -266,6 +273,7 @@ export const ide = new Map<string, TechnologyProps>([
 
 export const os = new Map<string, TechnologyProps>([
   ["Linux", technologies[13]],
+  ["Windows", technologies[40]],
 ]);
 
 export const sdk = new Map<string, TechnologyProps>([

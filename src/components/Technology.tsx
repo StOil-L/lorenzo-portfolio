@@ -16,7 +16,7 @@ function isIconDefinition(icon: IconDefinition | string): icon is IconDefinition
 function Technology(props: TechnologyProps) {
 
   return (
-    <div className="technology">
+    <div className="technology" title={props.name}>
       {isIconDefinition(props.icon) ? (
         <FontAwesomeIcon icon={props.icon as IconDefinition} style={{color: props.color}} size="4x" />
       ) : (

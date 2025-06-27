@@ -12,6 +12,7 @@ export const education: EducationSummaryProps[] = [
     technologies: [
       language.get("Python"),
       language.get("HTML"),
+      os.get("Windows"),
     ] as TechnologyProps[],
     results: "14.20 / 20 de moyenne, mention Bien",
     obtentionDate: new Date(2019, 9),
@@ -86,6 +87,7 @@ export const education: EducationSummaryProps[] = [
       ide.get("Android Studio"),
       ide.get("Arduino IDE"),
       os.get("Linux"),
+      os.get("Windows"),
       sdk.get("Flutter"),
     ] as TechnologyProps[],
     results: "13 / 20 de moyenne, mention Assez Bien",
