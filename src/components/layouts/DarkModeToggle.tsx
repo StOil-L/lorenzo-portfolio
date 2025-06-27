@@ -19,6 +19,7 @@ function DarkModeToggle() {
     setButtonIcon(getCookie("theme") as string);
   }, [])
 
+  // we don't check for accepted cookies here due to conditional rendering in NavigationMenu component
   const switchTheme = () => {
     setCookie("theme", getCookie("theme") == 'dark' ? 'light' : 'dark');
     setTheme();
@@ -26,12 +27,16 @@ function DarkModeToggle() {
 
   useEffect(() => {
     const setThemeToSystem = (event: MediaQueryListEvent | MediaQueryList) => {
-      setCookie('theme', event.matches ? 'dark' : 'light');
-      setTheme();
+      if(getCookie("cookiesaccept") === 'true') {
+        setCookie('theme', event.matches ? 'dark' : 'light');
+        setTheme();
+      }
     };
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     mediaQuery.addEventListener("change", setThemeToSystem);
-    if(typeof getCookie('theme') === 'undefined') setThemeToSystem(mediaQuery); else setTheme();
+    if(getCookie("cookiesaccept") === 'true') {
+      if(typeof getCookie('theme') === 'undefined') setThemeToSystem(mediaQuery); else setTheme();
+    }
     return () => {
       mediaQuery.removeEventListener("change", setThemeToSystem);
     };
