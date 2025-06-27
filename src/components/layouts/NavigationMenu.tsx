@@ -8,7 +8,7 @@ function NavigationMenu() {
       <Link to="aboutme">A propos de moi</Link>
       <Link to="projects">Projets</Link>
       <Link to="education">Formation</Link>
-      <Link to="interests">Centres d'intérêt</Link>
+      <Link to="experience">Expérience professionnelle</Link>
       <Link to="contact">Contact</Link>
       <DarkModeToggle />
     </nav>

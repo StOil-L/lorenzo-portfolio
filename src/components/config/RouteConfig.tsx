@@ -4,7 +4,7 @@ import MainLayout from "../layouts/MainLayout.tsx";
 import AboutMePage from "../pages/AboutMePage.tsx";
 import ProjectsPage from "../pages/ProjectsPage.tsx";
 import EducationPage from "../pages/EducationPage.tsx";
-import InterestsPage from "../pages/InterestsPage.tsx";
+import ExperiencePage from "../pages/ExperiencePage.tsx";
 import ContactPage from "../pages/ContactPage.tsx";
 
 function RouteConfig() {
@@ -16,7 +16,7 @@ function RouteConfig() {
           <Route path="aboutme" element={<AboutMePage />}/>
           <Route path="projects" element={<ProjectsPage />}/>
           <Route path="education" element={<EducationPage />}/>
-          <Route path="interests" element={<InterestsPage />}/>
+          <Route path="experience" element={<ExperiencePage />}/>
           <Route path="contact" element={<ContactPage />}/>
         </Route>
       </Routes>
