@@ -8,12 +8,19 @@ function ExperiencePage() {
     <>
       <PortfolioHeader>Expérience professionnelle</PortfolioHeader>
       {(manualReverse(experience) as ExperienceSummaryProps[])
-        .map((experience, i: number) => {
-          return <ExperienceSummary key={i} title={experience.title} imgsrc={experience.imgsrc}
-                                    company={experience.company} city={experience.city} mission={experience.mission}
-                                    tasks={experience.tasks} technologies={experience.technologies}
-                                    startDate={experience.startDate} endDate={experience.endDate}
-                                    link={experience.link} isAlt={i % 2 == 0} />
+        .map((exp, i: number) => {
+          return (
+            <>
+              {i == 0 && <div className='summary-transition' />}
+              <ExperienceSummary key={i} title={exp.title} imgsrc={exp.imgsrc}
+                                 company={exp.company} city={exp.city} mission={exp.mission}
+                                 tasks={exp.tasks} technologies={exp.technologies}
+                                 startDate={exp.startDate} endDate={exp.endDate}
+                                 link={exp.link} isAlt={i % 2 == 0} />
+              {(i < experience.length-1 || i % 2 == 0) &&
+                  <div className={`summary-transition${i % 2 == 0 ? ' alt' : ''}`} />}
+            </>
+          )
         })}
     </>
   )

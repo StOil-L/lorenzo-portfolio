@@ -8,12 +8,19 @@ function EducationPage() {
     <>
       <PortfolioHeader>Formation</PortfolioHeader>
       {(manualReverse(education) as EducationSummaryProps[])
-        .map((education, i: number) => {
-        return <EducationSummary key={i} title={education.title} description={education.description}
-                                 imgsrc={education.imgsrc} school={education.school} city={education.city}
-                                 technologies={education.technologies} results={education.results}
-                                 obtentionDate={education.obtentionDate} link={education.link}
-                                 isAlt={i % 2 == 0} />
+        .map((edu, i: number) => {
+        return (
+          <>
+            {i == 0 && <div className='summary-transition' />}
+            <EducationSummary key={i} title={edu.title} description={edu.description}
+                              imgsrc={edu.imgsrc} school={edu.school} city={edu.city}
+                              technologies={edu.technologies} results={edu.results}
+                              obtentionDate={edu.obtentionDate} link={edu.link}
+                              isAlt={i % 2 == 0} />
+            {(i < education.length-1 || i % 2 == 0) &&
+                <div className={`summary-transition${i % 2 == 0 ? ' alt' : ''}`} />}
+          </>
+        )
       })}
     </>
   )

@@ -15,6 +15,12 @@
   --light-link-color: #0070E8;
   --light-link-hover-color: #38B8F8;
 
+  /* VARIABLES DEGRADES */
+
+  /* Sombre - sujet à modifications via changement manuel de thème */
+  --summary-transition-gradient: linear-gradient(var(--dark-background-color), var(--light-text-color));
+  --summary-transition-alt-gradient: linear-gradient(var(--light-text-color), var(--dark-background-color));
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -70,15 +76,9 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/*@media (prefers-color-scheme: light) {*/
-/*  :root {*/
-/*    color: #213547;*/
-/*    background-color: #ffffff;*/
-/*  }*/
-/*  a:hover {*/
-/*    color: #747bff;*/
-/*  }*/
-/*  button {*/
-/*    background-color: #f9f9f9;*/
-/*  }*/
-/*}*/
+@media (prefers-color-scheme: light) {
+  :root {
+    --summary-transition-gradient: linear-gradient(var(--light-background-color), var(--dark-text-color));
+    --summary-transition-alt-gradient: linear-gradient(var(--dark-text-color), var(--light-background-color));
+  }
+}

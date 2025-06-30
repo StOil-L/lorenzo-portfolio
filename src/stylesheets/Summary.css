@@ -1,6 +1,6 @@
 .summary {
     padding: 1.5rem;
-    border-top: 2px solid #707070;
+    /*border-top: 2px solid #707070;*/
 }
 
 .summary.alt {
@@ -21,6 +21,18 @@
     transition: .2s;
     background-color: var(--nav-color);
     color: white;
+}
+
+.summary-transition {
+    display: inline-block;
+    height: 4rem;
+    width: 100%;
+    margin-bottom: -.375rem;
+    background: var(--summary-transition-gradient);
+}
+
+.summary-transition.alt {
+    background: var(--summary-transition-alt-gradient);
 }
 
 .technologies {
