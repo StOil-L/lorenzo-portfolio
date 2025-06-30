@@ -1,4 +1,5 @@
 import Technology, {type TechnologyProps} from "./Technology.tsx";
+import {displayDate} from "../../util/misc.ts";
 
 export interface EducationSummaryProps {
   title: string,
@@ -13,12 +14,6 @@ export interface EducationSummaryProps {
   isAlt?: boolean,
 }
 
-const localDateOptions: Intl.DateTimeFormatOptions = {
-  day: "numeric",
-  month: "long",
-  year: "numeric"
-};
-
 function EducationSummary(props: EducationSummaryProps) {
   return (
     <div className={`summary${props.isAlt ? ' alt' : ''}`}>
@@ -26,12 +21,10 @@ function EducationSummary(props: EducationSummaryProps) {
         <h2>{props.title}</h2>
         {props.school && (<h3>{props.school}{props.city && `, ${props.city}`}</h3>)}
         {props.obtentionDate && (
-          <h4>Obtenu le {typeof props.obtentionDate === 'string'?
-            props.obtentionDate : (props.obtentionDate as Date)
-              .toLocaleDateString(undefined, localDateOptions)}</h4>
+          <h4>Obtenu le {displayDate(props.obtentionDate)}</h4>
         )}
         {props.imgsrc && (
-          <img src={props.imgsrc} alt={`Logo ${props.school}`}/>
+          <img src={props.imgsrc} alt={`Logo ${props.school}`} />
         )}
         <p>{props.description}</p>
       </section>
