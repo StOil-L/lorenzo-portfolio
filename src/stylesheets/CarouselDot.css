@@ -5,9 +5,9 @@
 }
 
 .carousel-dots .active {
-    border: 8px solid #ffffff !important;
+    border: 8px solid var(--light-background-color) !important;
 }
 
 .carousel-dots .inactive {
-    border: 8px solid #213547;
+    border: 8px solid var(--dark-background-color);
 }
