@@ -40,7 +40,7 @@ export const technologies: TechnologyProps[] = [
     highlight: true,
   },
   {
-    name: "PostreSQL",
+    name: "PostgreSQL",
     icon: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg'
   },
   {
@@ -209,6 +209,15 @@ export const technologies: TechnologyProps[] = [
     name: "Windows",
     icon: faWindows,
     color: '00BCF4',
+  },
+  {
+    name: "Control-M",
+    icon: "technologies/control-m-logo.svg",
+    highlight: true,
+  },
+  {
+    name: "ALIEN 4 Cloud",
+    icon: "https://avatars.githubusercontent.com/u/8777718?s=280&v=4",
   }
 ]
 
@@ -256,6 +265,8 @@ export const devops = new Map<string, TechnologyProps>([
   ["Jenkins", technologies[7]],
   ["ESLint", technologies[12]],
   ["Docker", technologies[21]],
+  ["Control-M", technologies[41]],
+  ["ALIEN 4 Cloud", technologies[42]],
 ]);
 
 export const ai = new Map<string, TechnologyProps>([
