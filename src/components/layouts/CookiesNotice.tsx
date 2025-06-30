@@ -18,8 +18,8 @@ function CookiesNotice(props: Rerenderer) {
 
   return !confirmNotice && (
     <section id="cookies-notice">
-      <p>Ce site utilise des cookies dans l'unique but de faire fonctionner correctement le thème utilisé sur
-        celui-ci.</p>
+      <p>Ce site utilise des cookies dans le but de faire fonctionner correctement l'affichage de
+        celui-ci (thème, page actuelle, etc.)</p>
       <div className="buttons">
         <button onClick={() => {
           cookiesDispatch("accept");

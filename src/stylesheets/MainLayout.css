@@ -32,6 +32,12 @@ h1 {
     text-align: center;
 }
 
+.selected {
+    border-radius: 8px;
+    color: var(--nav-color);
+    background-color: white;
+}
+
 #cookies-notice {
     position: fixed;
     left: 0;
