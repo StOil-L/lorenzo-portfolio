@@ -71,6 +71,7 @@ export const education: EducationSummaryProps[] = [
       language.get("Python"),
       language.get("Rocq"),
       language.get("LaTeX"),
+      language.get("Dart"),
       database.get("MySQL"),
       database.get("MongoDB"),
       backend.get("Spring Boot"),

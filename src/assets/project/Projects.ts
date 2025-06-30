@@ -84,6 +84,7 @@ export const projects: ProjectSummaryProps[] = [
       collaborators.get("Arthur Sapin"),
     ] as CollaboratorProps[],
     technologies: [
+      language.get("C++"),
       ide.get("Arduino IDE"),
     ] as TechnologyProps[],
   },
