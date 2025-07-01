@@ -1,7 +1,7 @@
-import type {ExperienceSummaryProps} from "../components/summary/ExperienceSummary.tsx";
-import type {TaskProps} from "../components/summary/Task.tsx";
-import type {TechnologyProps} from "../components/summary/Technology.tsx";
-import {backend, database, devops, frontend, language, os} from "./project/Technologies.ts";
+import type {ExperienceSummaryProps} from "../../components/summary/ExperienceSummary.tsx";
+import type {TaskProps} from "../../components/summary/Task.tsx";
+import type {TechnologyProps} from "../../components/summary/Technology.tsx";
+import {backend, database, devops, frontend, language, os} from "./Technologies.ts";
 
 // TODO: ajouter imgsrc pour chaque expérience
 export const experience: ExperienceSummaryProps[] = [

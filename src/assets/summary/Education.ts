@@ -1,6 +1,6 @@
-import type {EducationSummaryProps} from "../components/summary/EducationSummary.tsx";
-import type {TechnologyProps} from "../components/summary/Technology.tsx";
-import {ai, backend, database, devops, frontend, ide, language, os, sdk} from "./project/Technologies.ts";
+import type {EducationSummaryProps} from "../../components/summary/EducationSummary.tsx";
+import type {TechnologyProps} from "../../components/summary/Technology.tsx";
+import {ai, backend, database, devops, frontend, ide, language, os, sdk} from "./Technologies.ts";
 
 //TODO: ajouter descriptions / imgsrcs formations
 export const education: EducationSummaryProps[] = [

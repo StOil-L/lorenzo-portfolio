@@ -1,6 +1,6 @@
 import PortfolioHeader from "../layouts/PortfolioHeader.tsx";
 import {manualReverse} from "../../util/misc.ts";
-import {education} from "../../assets/Education.ts";
+import {education} from "../../assets/summary/Education.ts";
 import EducationSummary, {type EducationSummaryProps} from "../summary/EducationSummary.tsx";
 
 function EducationPage() {

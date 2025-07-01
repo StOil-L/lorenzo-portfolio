@@ -1,5 +1,5 @@
 import PortfolioHeader from "../layouts/PortfolioHeader.tsx";
-import {projects} from "../../assets/project/Projects.ts";
+import {projects} from "../../assets/summary/Projects.ts";
 import ProjectSummary, {type ProjectSummaryProps} from "../summary/ProjectSummary.tsx";
 import {manualReverse} from "../../util/misc.ts";
 

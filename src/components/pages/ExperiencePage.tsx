@@ -1,6 +1,6 @@
 import PortfolioHeader from "../layouts/PortfolioHeader.tsx";
 import {manualReverse} from "../../util/misc.ts";
-import {experience} from "../../assets/Experience.ts";
+import {experience} from "../../assets/summary/Experience.ts";
 import ExperienceSummary, {type ExperienceSummaryProps} from "../summary/ExperienceSummary.tsx";
 
 function ExperiencePage() {
