@@ -7,8 +7,8 @@ import type {ForceRerender} from "./MainLayout.tsx";
 
 function NavigationMenu(props: ForceRerender) {
 
-  const [currentPage, setCurrentPage] = useState(getCookie("currentpage") === undefined ? ""
-    : getCookie("currentpage"));
+  const [currentPage, setCurrentPage] = useState(getCookie("currentpage") === undefined ||
+  !isHrefMatching(getCookie("currentpage") as string)? "" : getCookie("currentpage"));
   const routes = ["", "aboutme", "projects", "education", "experience", "contact"];
   const routeNames = ["Accueil", "A propos de moi", "Projets", "Formation",
     "Expérience professionnelle", "Contact"];
