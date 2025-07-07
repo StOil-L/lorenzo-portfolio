@@ -41,6 +41,7 @@ export const education: EducationSummaryProps[] = [
     ] as TechnologyProps[],
     results: "12 / 20 de moyenne, mention Assez Bien",
     obtentionDate: new Date(2022, 11, 9),
+    link: "https://informatique-fds.edu.umontpellier.fr/etudiants/offre-de-formation-licence/"
   },
   {
     title: "Cursus Master en Ingénierie",
@@ -54,6 +55,7 @@ export const education: EducationSummaryProps[] = [
       ide.get("Qt"),
     ] as TechnologyProps[],
     results: "Formation inachevée à la fin du M1",
+    link: "https://informatique-fds.edu.umontpellier.fr/etudiants/cmi-informatique-cursus-master-en-ingenierie/"
   },
   {
     title: "Master Informatique Génie Logiciel",
@@ -93,5 +95,6 @@ export const education: EducationSummaryProps[] = [
     ] as TechnologyProps[],
     results: "13 / 20 de moyenne, mention Assez Bien",
     obtentionDate: new Date(2024, 11, 6),
+    link: "https://informatique-fds.edu.umontpellier.fr/etudiants/master-informatique-parcours/parcours-gl-genie-logiciel/",
   }
 ]
