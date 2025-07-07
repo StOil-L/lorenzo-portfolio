@@ -40,6 +40,9 @@ function CarouselWrapper(props: CarouselWrapperProps) {
     dotsRef.current.forEach((dot: HTMLSpanElement, i: number) => {
       dot.addEventListener('click', () => slideTo(i))
     })
+    slidesRef.current.forEach((slide) => {
+      slide.style.transform = `translateX(-${100*currentSlide.current}%)`;
+    })
     return dotsRef.current.forEach((dot: HTMLSpanElement, i: number) => {
       dot.removeEventListener('click', () => slideTo(i))
     })
