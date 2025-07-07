@@ -40,7 +40,7 @@ function ProjectSummary(props: ProjectSummaryProps) {
                              color={technology.color} highlight={technology.highlight} />
         })}
       </div>
-      {props.link && (<a href={props.link}>En savoir plus</a>)}
+      {props.link && (<a href={props.link}>Voir le dépôt du projet</a>)}
     </div>
   )
 }
