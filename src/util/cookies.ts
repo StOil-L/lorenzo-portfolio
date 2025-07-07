@@ -1,5 +1,5 @@
-export function setCookie(cname: string, cvalue: string, maxage: number = 2592000) { // âge par défaut : 30 jours
-  document.cookie = cname + "=" + cvalue + ";" + "max-age=" + maxage.toString() + ";" + "path=/lorenzo-portfolio";
+export function setCookie(cname: string, cvalue: string, maxage: number = 2592000, path: string = "/lorenzo-portfolio") { // âge par défaut : 30 jours
+  document.cookie = cname + "=" + cvalue + ";" + "max-age=" + maxage.toString() + ";" + `path=${path}`;
 }
 
 export function getCookie(cname: string): string | undefined {
