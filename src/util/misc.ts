@@ -19,7 +19,6 @@ export function displayDate(date: Date | string): string {
 const urlRegex = /(?<=lorenzo-portfolio\/?)[a-z]+/;
 
 export function isHrefMatching(href: string): boolean {
-  console.log("To match:", window.location.href);
   return (urlRegex.exec(window.location.href) == null && href === '') ||
     (!!urlRegex.exec(window.location.href) && urlRegex.exec(window.location.href)![0] === href);
 }
