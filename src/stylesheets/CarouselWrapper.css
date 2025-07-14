@@ -1,11 +1,20 @@
+.carousel-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .carousel {
+    width: 100%;
     position: relative;
+}
+
+.carousel.side {
+    width: 35%;
 }
 
 .carousel-content {
     display: flex;
     overflow: hidden;
-    height: 100%;
     flex-wrap: nowrap;
 }
 
@@ -31,4 +40,10 @@
     bottom: 5%;
     display: flex;
     justify-content: center;
+}
+
+.carousel-wrapper .text {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }

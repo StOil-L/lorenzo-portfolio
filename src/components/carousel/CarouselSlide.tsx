@@ -1,5 +1,6 @@
 import "../../stylesheets/CarouselSlide.css";
 import * as React from "react";
+import CarouselSlideText from "./CarouselSlideText.tsx";
 
 export interface CarouselSlideProps extends React.HTMLAttributes<HTMLDivElement> {
   ref?: React.Ref<HTMLDivElement>;
@@ -15,13 +16,7 @@ export function CarouselSlide (props: CarouselSlideProps) {
     <div ref={props.ref} className="slide">
       <img src={props.imgurl} alt={props.imgalt} />
       {props.title && props.description && (
-        <div className="text">
-          <div className="margin-applier">
-            <h3>{props.title}</h3>
-            <p>{props.description}</p>
-            {props.link && (<a href={props.link}>En savoir plus</a>)}
-          </div>
-        </div>
+        <CarouselSlideText title={props.title} description={props.description} link={props.link} />
       )}
     </div>
   )
