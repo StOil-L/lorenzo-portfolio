@@ -36,6 +36,7 @@
 }
 
 a {
+  font-size: 1.125rem;
   font-weight: 500;
   color: light-dark(var(--light-link-color), var(--dark-link-color));
   text-decoration: inherit;
@@ -47,12 +48,11 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  /*place-items: center;*/
   min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
+header h1 {
   font-size: 5rem;
   line-height: 1.1;
 }
@@ -74,6 +74,11 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+p, li {
+  font-size: 1.125rem;
+  line-height: 2.25;
 }
 
 @media (prefers-color-scheme: light) {
