@@ -52,6 +52,7 @@ function CarouselWrapper(props: CarouselWrapperProps) {
     })
     slidesRef.current.forEach((slide) => {
       slide.style.transform = `translateX(-${100*currentSlide.current}%)`;
+      slide.style.background = `center/cover url(${(slide.firstChild as HTMLImageElement).src})`;
     })
     return dotsRef.current.forEach((dot: HTMLSpanElement, i: number) => {
       dot.removeEventListener('click', () => slideTo(i))
