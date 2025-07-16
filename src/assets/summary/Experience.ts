@@ -3,7 +3,6 @@ import type {TaskProps} from "../../components/summary/Task.tsx";
 import type {TechnologyProps} from "../../components/summary/Technology.tsx";
 import {backend, database, devops, frontend, language, os} from "./Technologies.ts";
 
-// TODO: ajouter imgsrc pour chaque expérience
 export const experience: ExperienceSummaryProps[] = [
   {
     title: "Assistant de recherche bibliographique",

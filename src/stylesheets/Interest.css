@@ -1,0 +1,7 @@
+.interest {
+    padding: 1.5rem;
+}
+
+.interest.alt {
+    background-color: light-dark(var(--dark-text-color), var(--light-text-color));
+}
