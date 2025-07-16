@@ -20,12 +20,16 @@ function ExperienceSummary(props: ExperienceSummaryProps) {
   return (
     <div className={`summary${props.isAlt ? ' alt' : ''}`}>
       <section>
-        <h2>{props.title}</h2>
-        {props.company && (<h3>{props.company}{props.city && `, ${props.city}`}</h3>)}
-        <h4>Du {displayDate(props.startDate)} au {displayDate(props.endDate)}</h4>
-        {props.imgsrc && (
-          <img src={props.imgsrc} alt={`Logo ${props.company}`}/>
-        )}
+        <div className="essential-info">
+          <div className="text">
+            <h2>{props.title}</h2>
+            {props.company && (<h3>{props.company}{props.city && `, ${props.city}`}</h3>)}
+            <h4>Du {displayDate(props.startDate)} au {displayDate(props.endDate)}</h4>
+          </div>
+          {props.imgsrc && (
+            <img src={props.imgsrc} alt={`Logo ${props.company}`}/>
+          )}
+        </div>
         <p><b>{props.mission}</b></p>
         {props.tasks && (
           <ul>

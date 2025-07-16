@@ -18,14 +18,18 @@ function EducationSummary(props: EducationSummaryProps) {
   return (
     <div className={`summary${props.isAlt ? ' alt' : ''}`}>
       <section>
-        <h2>{props.title}</h2>
-        {props.school && (<h3>{props.school}{props.city && `, ${props.city}`}</h3>)}
-        {props.obtentionDate && (
-          <h4>Obtenu le {displayDate(props.obtentionDate)}</h4>
-        )}
-        {props.imgsrc && (
-          <img src={props.imgsrc} alt={`Logo ${props.school}`} />
-        )}
+        <div className="essential-info">
+          <div className="text">
+            <h2>{props.title}</h2>
+            {props.school && (<h3>{props.school}{props.city && `, ${props.city}`}</h3>)}
+            {props.obtentionDate && (
+              <h4>Obtenu le {displayDate(props.obtentionDate)}</h4>
+            )}
+          </div>
+          {props.imgsrc && (
+            <img src={props.imgsrc} alt={`Logo ${props.school}`} />
+          )}
+        </div>
         <p>{props.description}</p>
       </section>
       {props.technologies && (

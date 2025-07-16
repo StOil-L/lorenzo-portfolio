@@ -7,7 +7,7 @@ import {backend, database, devops, frontend, language, os} from "./Technologies.
 export const experience: ExperienceSummaryProps[] = [
   {
     title: "Assistant de recherche bibliographique",
-    imgsrc: "",
+    imgsrc: "https://www.umontpellier.fr/wp-content/uploads/2014/07/LogoLIRMMlong.jpg",
     company: "LIRMM",
     city: "Montpellier",
     mission: "Etat de l'art : Débattre et argumenter pour écrire des preuves mathématiques",
@@ -27,7 +27,7 @@ export const experience: ExperienceSummaryProps[] = [
   },
   {
     title: "Développeur logiciel",
-    imgsrc: "",
+    imgsrc: "https://www.umontpellier.fr/wp-content/uploads/2014/07/LogoLIRMMlong.jpg",
     company: "LIRMM",
     city: "Montpellier",
     mission: "Développement du plugin Rocq pour le prouveur automatique Goéland",
@@ -56,7 +56,7 @@ export const experience: ExperienceSummaryProps[] = [
   },
   {
     title: "Ingénieur logiciel",
-    imgsrc: "",
+    imgsrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/CGI_logo.svg/2560px-CGI_logo.svg.png",
     company: "CGI",
     city: "Castelnau-le-Lez",
     mission: "Intervention auprès d'un client du domaine bancaire selon les méthodes Agiles (Kanban, Scrum)",
