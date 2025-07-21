@@ -2,7 +2,7 @@ import PortfolioHeader from "../layouts/PortfolioHeader.tsx";
 
 function ContactPage() {
   return (
-    <PortfolioHeader>Contact</PortfolioHeader>
+    <PortfolioHeader imgsrc="photos/contact.jpg">Contact</PortfolioHeader>
   )
 }
 

@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: -4rem;
+}
+
+header h1 {
+    font-size: 6.25rem;
+    line-height: 1.1;
+    color: light-dark(black, white);
+    text-align: left;
+    max-width: 50%;
+    overflow-wrap: break-word;
+    text-shadow: 0.25rem 0.25rem 0.5rem light-dark(var(--dark-background-color), #B8B8B8);
+}
+
+header img {
+    height: 100%;
+    box-shadow: 0 0 4vw 0.25rem light-dark(black, white);
+}
