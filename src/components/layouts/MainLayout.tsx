@@ -4,6 +4,7 @@ import NavigationMenu from "./NavigationMenu.tsx";
 import {Outlet} from "react-router";
 import CookiesNotice from "./CookiesNotice.tsx";
 import {useState} from "react";
+import * as React from "react";
 
 export interface ForceRerender {
   value: number;

@@ -17,18 +17,7 @@ function DarkModeToggle() {
   const setTheme = useCallback(() => {
     document.documentElement.style.colorScheme = getCookie("theme") as string;
     setButtonIcon(getCookie("theme") as string);
-    setGradients();
   }, [])
-
-  // Gradients for transition manually set because there is no equivalent to light-dark in CSS for them
-  const setGradients = () => {
-    document.documentElement.style.setProperty("--summary-transition-gradient",
-      getCookie('theme') == 'dark' ? 'linear-gradient(var(--dark-background-color), var(--light-text-color))' :
-        'linear-gradient(var(--light-background-color), var(--dark-text-color))');
-    document.documentElement.style.setProperty("--summary-transition-alt-gradient",
-      getCookie('theme') == 'dark' ? 'linear-gradient(var(--light-text-color), var(--dark-background-color))' :
-        'linear-gradient(var(--dark-text-color), var(--light-background-color))');
-  }
 
   // we don't check for accepted cookies here due to conditional rendering in NavigationMenu component
   const switchTheme = () => {
