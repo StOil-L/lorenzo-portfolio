@@ -1,4 +1,4 @@
-import '../../stylesheets/Interest.css';
+import '../../stylesheets/Summary.css';
 import CarouselWrapper from "../carousel/CarouselWrapper.tsx";
 import type {CarouselSlideProps} from "../carousel/CarouselSlide.tsx";
 
@@ -13,7 +13,7 @@ export interface InterestProps {
 function Interest(props: InterestProps) {
 
   return (
-    <div className={`interest${props.isAlt ? " alt" : ""}`} id={props.id}>
+    <div className={`summary${props.isAlt ? " alt" : ""}`} id={props.id}>
       <h2>{props.name}</h2>
       {Array.isArray(props.paragraphs) ? props.paragraphs.map((paragraph, i) => {
         return <p key={i}>{paragraph}</p>

@@ -28,6 +28,10 @@
     color: white;
 }
 
+.summary .profilepage {
+    font-size: unset;
+}
+
 .summary .essential-info .text {
     max-width: 100%;
     margin-right: 1rem;
