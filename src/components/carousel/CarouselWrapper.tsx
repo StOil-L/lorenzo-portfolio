@@ -8,6 +8,7 @@ import CarouselSlideText from "./CarouselSlideText.tsx";
 
 interface CarouselWrapperProps {
   slides: CarouselSlideProps[];
+  autoScroll?: boolean;
   sideDisplay?: boolean;
   textSide?: string;
 }
@@ -40,7 +41,7 @@ function CarouselWrapper(props: CarouselWrapperProps) {
   )
 
   useEffect(() => {
-    if(!isStopped) intervalRef.current = setInterval(() => {
+    if(!isStopped && props.autoScroll) intervalRef.current = setInterval(() => {
       slideTo(++currentSlide.current)
     }, 5000)
     return () => clearInterval(intervalRef.current)
