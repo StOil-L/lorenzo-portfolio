@@ -2,8 +2,13 @@ import PortfolioHeader from "../layouts/PortfolioHeader.tsx";
 import {projects} from "../../assets/summary/Projects.ts";
 import ProjectSummary, {type ProjectSummaryProps} from "../summary/ProjectSummary.tsx";
 import {manualReverse} from "../../util/misc.ts";
+import {useEffect} from "react";
 
 function ProjectsPage() {
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }, []);
 
   return (
     <>

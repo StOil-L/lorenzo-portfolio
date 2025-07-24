@@ -2,8 +2,14 @@ import PortfolioHeader from "../layouts/PortfolioHeader.tsx";
 import {manualReverse} from "../../util/misc.ts";
 import {education} from "../../assets/summary/Education.ts";
 import EducationSummary, {type EducationSummaryProps} from "../summary/EducationSummary.tsx";
+import {useEffect} from "react";
 
 function EducationPage() {
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }, []);
+
   return (
     <>
       <PortfolioHeader imgsrc="photos/education.jpg">Formation</PortfolioHeader>

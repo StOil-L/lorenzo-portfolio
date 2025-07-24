@@ -1,14 +1,20 @@
 import PortfolioHeader from "../layouts/PortfolioHeader.tsx";
 import {interests} from "../../assets/summary/Interests.ts";
 import Interest from "../summary/Interest.tsx";
+import {useEffect} from "react";
 
 function AboutMePage() {
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }, []);
+
   return (
     <>
       <PortfolioHeader imgsrc="photos/aboutme.jpg">A propos de moi</PortfolioHeader>
       <div id="page-info-transition" />
       <div id="page-info">
-        <div id="aboutme-info">
+        <div id="explanation">
           <p>Né en 2002, mes premières inspirations vers l'informatique se sont manifestées en entendant mon père parler
             de son travail en tant que responsable sécurité informatique. Plus jeunes, mes parents jouaient à des jeux vidéo
             pendant leur temps libre; cette tendance a persisté dans la famille pour mon frère et moi dès le plus jeune âge !

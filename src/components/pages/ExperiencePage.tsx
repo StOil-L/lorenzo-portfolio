@@ -2,8 +2,14 @@ import PortfolioHeader from "../layouts/PortfolioHeader.tsx";
 import {manualReverse} from "../../util/misc.ts";
 import {experience} from "../../assets/summary/Experience.ts";
 import ExperienceSummary, {type ExperienceSummaryProps} from "../summary/ExperienceSummary.tsx";
+import {useEffect} from "react";
 
 function ExperiencePage() {
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }, []);
+
   return (
     <>
       <PortfolioHeader imgsrc="photos/experience.jpg">Expérience professionnelle</PortfolioHeader>
