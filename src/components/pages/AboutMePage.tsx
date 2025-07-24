@@ -44,7 +44,9 @@ function AboutMePage() {
             de nouveau sur l'industrie, mes compétences et ma personnalité. Bien que je favorise certaines technologies par
             pour des questions d'habitude ou d'expérience, je reste ouvert sur l'apprentissage de nouvelles technologies
             selon les besoin de la mission ou simplement par curiosité personnelle. </p>
-          {/* TODO: Trouver une phrase d'accroche dynamique à mettre en gras */}
+          <h3><b>Authentique, persévérant et rigoureux, je me positionne aujourd'hui en développeur web prêt à résoudre
+            des problèmes réels, cohérents avec le métier et d'appliquer une grande attention à la qualité de la
+            solution.</b></h3>
         </div>
         {interests.length > 0 && (
           <>

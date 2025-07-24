@@ -8,9 +8,10 @@ export const interests: InterestProps[] = [
     id: "music",
     name: "Musique",
     paragraphs: [
-      "J'ai grandi dans une famille très sensible à l'art, notamment à la musique. C'est une chose d'écouter de la musique, comme nous avons tous fait très jeunes dans la famille, mais les garçons de la famille ont également été à la Maîtrise de Nîmes, une association de musique axée principalement sur le chant. Mes parents et mon frère ont également été musiciens, respectivement joueurs de piano et de batterie et guitare. Bien que je n'ai jamais pris goût à jouer d'un instrument, j'ai néanmoins le sens du rythme.",
+      "J'ai grandi dans une famille très sensible à l'art, notamment à la musique. C'est une chose d'écouter de la musique, comme nous avons tous fait très jeunes dans la famille, mais les garçons de la famille ont également été à la Maîtrise de Nîmes, une association de musique axée principalement sur le chant. Mes parents et mon frère ont également été musiciens, respectivement joueurs de piano et de batterie et guitare. Bien que je n'ai jamais pris goût à jouer d'un instrument, j'ai néanmoins appris à assimiler le rythme d'une chanson très facilement en écoutant la musique de mes parents.",
       "Depuis janvier 2024, je tiens une liste d'artistes à écouter à l'avenir ou déjà écoutés. Dans cette liste, je renseigne pour chaque artiste : les années d'activité, le genre musical et quelques pistes que j'ai bien aimées. Organiser la liste me permet de mieux identifier mes goûts musicaux. C'est en restant curieux et ouvert d'esprit que je remplis ma liste de recommendations. Ces dernières me sont données par une variété de personnes : d'inconnus rencontrés dans un bar à ma famille proche, les différences d'âge et d'expérience de vie entre ces différentes personnes assurent une grande variété de recommendations musicales.",
-      "Cela ne m'empêche cependant pas d'avoir quelques préférences en terme de genres musicaux ou artistes. En voici quelques-uns : ",
+      "Aujourd'hui je pense sincèrement que je ne pourrais pas me passer de la musique et de son influence sur mon humeur, mes habitudes et mon travail. Je ne fais plus rien sans musique et je ne changerais ça pour rien au monde.",
+      "Cela ne m'empêche cependant pas d'avoir quelques préférences en terme de genres musicaux ou artistes. En voici quelques-uns tirés de la liste d'artistes musicaux mentionnée précédemment : ",
     ],
     slides: music,
   },
@@ -19,7 +20,8 @@ export const interests: InterestProps[] = [
     name: "Jeux vidéo",
     paragraphs: [
       "Comme expliqué plus tôt, j'ai longtemps été un grand joueur de jeux vidéo dans ma vie. Bien que ces jeux apportent principalement du divertissement, ils m'ont également permis de m'inspirer afin de former des idées et principes qui définissent la personne que je suis aujourd'hui.",
-      "J'ai plutôt tendance à jouer à des jeux solo. Ce n'est pas que je déteste jouer à des jeux multijoueurs en ligne, mais plutôt qu'il est plus facile pour moi de m'adapter aux défis proposés par le jeu si moi seul définit l'issue de celui-ci. Ainsi, je ne ralentis pas les autres et je monte en compétence à un rythme confortable.",
+      "J'ai longtemps grandi avec l'ordinateur du salon, configuré par mon père pour avoir une session dédiée au jeu. Mon frère et moi jouions notamment à des vieux jeux de simulation ou même aux jeux intégrés à Windows XP. Cela a rapidement évolué avec l'introduction des consoles Nintendo dans notre foyer. Nous avions commencé avec des consoles portables telles que la Game Boy Color, puis la DS et ses variantes. Nous avons ensuite fait de la place pour une console de salon, notamment la Wii, puis la Switch.",
+      "Aujourd'hui, j'ai plutôt tendance à jouer à des jeux solo. Ce n'est pas que je déteste jouer à des jeux multijoueurs en ligne, mais plutôt qu'il est plus facile pour moi de m'adapter aux défis proposés par le jeu si moi seul définit l'issue de celui-ci. Ainsi, je ne ralentis pas les autres et je monte en compétence à un rythme qui m'est confortable.",
       "Je considère chaque obstacle comme un défi à relever, quelle que soit la difficulté; je vise toujours à compléter chaque jeu à 100% le plus possible. C'est un principe qui guide ma vie : ma volonté de me prouver, puis d'accompagner ceux qui veulent faire de même.",
       "Parmi les jeux auquel j'ai joué dans ma vie, certains ont eu un impact puissant sur ma vie. En voici certains :",
     ],
