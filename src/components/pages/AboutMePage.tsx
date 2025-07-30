@@ -1,19 +1,16 @@
-import PortfolioHeader from "../layouts/PortfolioHeader.tsx";
 import {interests} from "../../assets/summary/Interests.ts";
 import Interest from "../summary/Interest.tsx";
-import {useEffect} from "react";
+import GenericPage from "./GenericPage.tsx";
+import siteRoutes from "../../assets/config/SiteRoutes.ts";
 
 function AboutMePage() {
 
-  useEffect(() => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  }, []);
-
   return (
-    <>
-      <PortfolioHeader imgsrc="photos/aboutme.jpg">A propos de moi</PortfolioHeader>
-      <div id="page-info-transition" />
-      <div id="page-info">
+    <GenericPage header={{
+      imgsrc: "",
+      children: siteRoutes.get("aboutme") as string,
+    }} route="aboutme">
+      <>
         <div id="explanation">
           <p>Né en 2002, mes premières inspirations vers l'informatique se sont manifestées en entendant mon père parler
             de son travail en tant que responsable sécurité informatique. Plus jeunes, mes parents jouaient à des jeux vidéo
@@ -51,7 +48,7 @@ function AboutMePage() {
             pour des questions d'habitude ou d'expérience, je reste ouvert sur l'apprentissage de nouvelles technologies
             selon les besoin de la mission ou simplement par curiosité personnelle. </p>
           <h3><b>Authentique, persévérant et rigoureux, je me positionne aujourd'hui en développeur web prêt à résoudre
-            des problèmes réels, cohérents avec le métier et d'appliquer une grande attention à la qualité de la
+            des problèmes réels, cohérents avec le métier et de porter une importante attention à la qualité de la
             solution.</b></h3>
         </div>
         {interests.length > 0 && (
@@ -69,8 +66,8 @@ function AboutMePage() {
             })}
           </>
         )}
-      </div>
-    </>
+      </>
+    </GenericPage>
   )
 }
 
