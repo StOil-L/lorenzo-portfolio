@@ -1,6 +1,6 @@
 import '../../stylesheets/PortfolioHeader.css';
 
-type PortfolioHeaderProps = {
+export type PortfolioHeaderProps = {
   children: string
   imgsrc: string
   imgalt?: string

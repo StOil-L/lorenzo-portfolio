@@ -1,14 +1,15 @@
-import PortfolioHeader from "../layouts/PortfolioHeader.tsx";
-import {useEffect} from "react";
+import GenericPage from "./GenericPage.tsx";
+import siteRoutes from "../../assets/config/SiteRoutes.ts";
 
 function ContactPage() {
 
-  useEffect(() => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  }, []);
-
   return (
-    <PortfolioHeader imgsrc="photos/contact.jpg">Contact</PortfolioHeader>
+    <GenericPage header={{
+      imgsrc: "",
+      children: siteRoutes.get("contact") as string,
+    }} route="contact">
+      Ceci est une page de contact générique. Je vais la mettre à jour.
+    </GenericPage>
   )
 }
 
