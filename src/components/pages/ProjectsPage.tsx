@@ -1,7 +1,6 @@
 import {projects} from "../../assets/summary/Projects.ts";
 import ProjectSummary, {type ProjectSummaryProps} from "../summary/ProjectSummary.tsx";
 import {manualReverse} from "../../util/misc.ts";
-import siteRoutes from "../../assets/config/SiteRoutes.ts";
 import GenericPage from "./GenericPage.tsx";
 
 function ProjectsPage() {
@@ -9,7 +8,7 @@ function ProjectsPage() {
   return (
     <GenericPage header={{
       imgsrc: "",
-      children: siteRoutes.get("projects") as string,
+      children: "",
     }} route="projects">
       {(manualReverse(projects) as ProjectSummaryProps[])
         .map((project, i: number) => {

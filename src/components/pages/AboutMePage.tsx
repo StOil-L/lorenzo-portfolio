@@ -1,14 +1,13 @@
 import {interests} from "../../assets/summary/Interests.ts";
 import Interest from "../summary/Interest.tsx";
 import GenericPage from "./GenericPage.tsx";
-import siteRoutes from "../../assets/config/SiteRoutes.ts";
 
 function AboutMePage() {
 
   return (
     <GenericPage header={{
       imgsrc: "",
-      children: siteRoutes.get("aboutme") as string,
+      children: "",
     }} route="aboutme">
       <>
         <div id="explanation">

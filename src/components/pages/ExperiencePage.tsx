@@ -1,7 +1,6 @@
 import {manualReverse} from "../../util/misc.ts";
 import {experience} from "../../assets/summary/Experience.ts";
 import ExperienceSummary, {type ExperienceSummaryProps} from "../summary/ExperienceSummary.tsx";
-import siteRoutes from "../../assets/config/SiteRoutes.ts";
 import GenericPage from "./GenericPage.tsx";
 
 function ExperiencePage() {
@@ -9,7 +8,7 @@ function ExperiencePage() {
   return (
     <GenericPage header={{
       imgsrc: "",
-      children: siteRoutes.get("experience") as string,
+      children: "",
     }} route="experience">
       {(manualReverse(experience) as ExperienceSummaryProps[])
         .map((exp, i: number) => {

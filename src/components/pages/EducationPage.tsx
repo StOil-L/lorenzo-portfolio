@@ -1,7 +1,6 @@
 import {manualReverse} from "../../util/misc.ts";
 import {education} from "../../assets/summary/Education.ts";
 import EducationSummary, {type EducationSummaryProps} from "../summary/EducationSummary.tsx";
-import siteRoutes from "../../assets/config/SiteRoutes.ts";
 import GenericPage from "./GenericPage.tsx";
 
 function EducationPage() {
@@ -9,7 +8,7 @@ function EducationPage() {
   return (
     <GenericPage header={{
       imgsrc: "",
-      children: siteRoutes.get("education") as string,
+      children: "",
     }} route="education">
       {(manualReverse(education) as EducationSummaryProps[])
         .map((edu, i: number) => {
