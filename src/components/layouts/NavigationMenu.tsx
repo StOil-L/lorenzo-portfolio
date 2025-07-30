@@ -1,39 +1,41 @@
 import {Link} from "react-router";
 import DarkModeToggle from "./DarkModeToggle.tsx";
-import {getCookie, setCookie} from "../../util/cookies.ts";
-import {useEffect, useState} from "react";
+import {getCookie, setPageCookie} from "../../util/cookies.ts";
+import {useContext, useEffect} from "react";
 import {isHrefMatching} from "../../util/misc.ts";
-import type {ForceRerender} from "./MainLayout.tsx";
+import {siteRouteIds, siteRouteNames} from "../../assets/config/SiteRoutes.ts";
+import {AuthorizedCookies, type ContextState, CurrentPage} from "../../util/contexts.ts";
 
-function NavigationMenu(props: ForceRerender) {
+function NavigationMenu() {
 
-  const [currentPage, setCurrentPage] = useState(getCookie("currentpage") === undefined ||
-  !isHrefMatching(getCookie("currentpage") as string)? "" : getCookie("currentpage"));
-  const routes = ["", "aboutme", "projects", "education", "experience", "contact"];
-  const routeNames = ["Accueil", "A propos de moi", "Projets", "Formation",
-    "Expérience professionnelle", "Contact"];
+  const acceptCookies = useContext<ContextState<number>>(AuthorizedCookies);
+  const currentPageValue = useContext<ContextState<string>>(CurrentPage);
 
   useEffect(() => {
-    routes.forEach((route) => {
-      const selectedElt = document.getElementById(route);
-      if(currentPage === route) {
-        selectedElt?.setAttribute("class", `${route} selected`);
-      } else {
-        selectedElt?.setAttribute("class", "");
+    let pageFound: boolean = false;
+    let i = 0;
+    while(i < siteRouteIds.length && !pageFound) {
+      const currentRoute = siteRouteIds[i];
+      const selectedElt = document.getElementById(currentRoute);
+      if(currentPageValue.state === currentRoute) {
+        selectedElt?.setAttribute("class", `${currentRoute} selected`);
+        pageFound = true;
       }
-    })
-    if(getCookie("cookiesaccept") === 'true')
-      setCookie("currentpage", currentPage as string)
-  }, [currentPage]);
+      i++;
+    }
+    setPageCookie(currentPageValue.state);
+  }, [currentPageValue.state]);
 
   return (
     <nav>
-      {routes.map((route, index) => {
-        return <Link key={index} id={route} className={isHrefMatching(route) ? "selected" : ""}
-                     to={route} onClick={() => setCurrentPage(route)}>{routeNames[index]}</Link>
+      {siteRouteIds.map((routeId, index) => {
+        return <Link key={index} id={routeId} className={isHrefMatching(routeId) ? "selected" : ""}
+                     to={routeId} onClick={() => currentPageValue.action!(routeId)}>
+          {siteRouteNames[index]}
+        </Link>
       })}
       {(getCookie("cookiesaccept") === 'true' // on page reload
-        || (props.value > 0)) // on cookies accepted (value becomes 1)
+        || (acceptCookies.state > 0)) // on cookies accepted (value becomes 1)
         && <DarkModeToggle />}
     </nav>
   )

@@ -3,32 +3,30 @@ import '../../stylesheets/Summary.css'
 import NavigationMenu from "./NavigationMenu.tsx";
 import {Outlet} from "react-router";
 import CookiesNotice from "./CookiesNotice.tsx";
+import {acContextInitialState, AuthorizedCookies, cpContextInitialState, CurrentPage} from "../../util/contexts.ts";
 import {useState} from "react";
-import * as React from "react";
-
-export interface ForceRerender {
-  value: number;
-}
-
-export interface Rerenderer {
-  callback: React.Dispatch<React.SetStateAction<number>>;
-}
 
 function MainLayout() {
 
-  // Because we want NavigationMenu to be updated to render the DarkModeToggle component,
-  // we pass a dummy useState to CookiesNotice which is triggered when pressing any of the buttons
-  // and the value is updated back in MainLayout, then passed down to NavigationMenu again
-  const [rerenderValue, forceRerender] = useState<number>(0);
+  const [acceptCookies, setAcceptCookies] = useState<number>(acContextInitialState);
+  const [currentPage, setCurrentPage] = useState<string>(cpContextInitialState);
 
   return (
-    <>
-      <NavigationMenu value={rerenderValue} />
-      <div id="page-content">
-        <Outlet />
-      </div>
-      <CookiesNotice callback={forceRerender} />
-    </>
+    <AuthorizedCookies value={{
+      state: acceptCookies,
+      action: setAcceptCookies,
+    }}>
+      <CurrentPage value={{
+        state: currentPage,
+        action: setCurrentPage,
+      }}>
+        <NavigationMenu />
+        <div id="page-content">
+          <Outlet />
+        </div>
+      </CurrentPage>
+      <CookiesNotice />
+    </AuthorizedCookies>
   )
 }
 

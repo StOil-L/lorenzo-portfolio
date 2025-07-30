@@ -1,34 +1,26 @@
-import {useReducer} from "react";
-import {getCookie, setCookie} from "../../util/cookies.ts";
-import type {Rerenderer} from "./MainLayout.tsx";
+import {useContext} from "react";
+import {setCookie} from "../../util/cookies.ts";
+import {AuthorizedCookies, type ContextState} from "../../util/contexts.ts";
 
-function reducer(state: boolean, action: string) {
-  if(action === 'accept') {
-    setCookie('cookiesaccept', 'true')
-  } else if(action === 'refuse') {
-    setCookie('cookiesaccept', 'false')
-  } else throw Error("Unknown action")
-  state = true;
-  return state;
-}
+function CookiesNotice() {
 
-function CookiesNotice(props: Rerenderer) {
+  const acceptCookies = useContext<ContextState<number>>(AuthorizedCookies);
 
-  const [confirmNotice, cookiesDispatch] = useReducer(reducer, getCookie("cookiesaccept") !== undefined);
-
-  return !confirmNotice && (
+  return acceptCookies.state == 0 && (
     <section id="cookies-notice">
       <p>Ce site utilise des cookies dans le but de faire fonctionner correctement l'affichage de
         celui-ci (thème, page actuelle, etc.)</p>
       <div className="buttons">
         <button onClick={() => {
-          cookiesDispatch("accept");
-          props.callback(1)
-        }}>Accepter les cookies</button>
+          setCookie('cookiesaccept', 'true')
+          acceptCookies.action!(1);
+        }}>Accepter les cookies
+        </button>
         <button onClick={() => {
-          cookiesDispatch("refuse")
-          props.callback(-1)
-        }}>Refuser les cookies</button>
+          setCookie('cookiesaccept', 'false')
+          acceptCookies.action!(-1);
+        }}>Refuser les cookies
+        </button>
       </div>
     </section>
   )

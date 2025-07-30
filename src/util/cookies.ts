@@ -17,3 +17,7 @@ export function getCookie(cname: string): string | undefined {
   }
   return undefined;
 }
+
+export function setPageCookie(route: string) {
+  if(getCookie("cookiesaccept") === 'true') setCookie("currentpage", route as string)
+}
