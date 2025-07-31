@@ -1,0 +1,15 @@
+.contacts a {
+    margin-top: 1.5rem;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    color: light-dark(var(--dark-text-color), var(--light-text-color));
+    background-color: light-dark(var(--dark-background-color), var(--light-background-color));
+    cursor: pointer;
+}
+
+.contacts a:hover {
+    transition: .2s;
+    background-color: var(--nav-color);
+    color: white;
+}
