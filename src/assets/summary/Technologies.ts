@@ -218,6 +218,11 @@ export const technologies: TechnologyProps[] = [
   {
     name: "ALIEN 4 Cloud",
     icon: "https://avatars.githubusercontent.com/u/8777718?s=280&v=4",
+  },
+  {
+    name: "React Router",
+    icon: "https://reactrouter.com/_brand/React%20Router%20Brand%20Assets/React%20Router%20Logo/Light.svg",
+    highlight: true,
   }
 ]
 
@@ -257,6 +262,7 @@ export const frontend = new Map<string, TechnologyProps>([
   ["Redux", technologies[10]],
   ["Vite", technologies[24]],
   ["Angular", technologies[35]],
+  ["React Router", technologies[43]],
 ]);
 
 export const devops = new Map<string, TechnologyProps>([
