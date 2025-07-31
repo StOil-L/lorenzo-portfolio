@@ -1,54 +1,29 @@
-# React + TypeScript + Vite
+# My portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Authors
 
-Currently, two official plugins are available:
+[Lorenzo PUCCIO](https://github.com/StOil-L)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Context
 
-## Expanding the ESLint configuration
+The idea for a personal portfolio serves multiple purposes :
+- Increased visibility on LinkedIn and the job market in general
+- Build a front-end project from the ground up, with the freedom of experimenting with preferred technologies, most notably React
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+As such, this portfolio is my entryway to show to recruiters who I am, what I've studied and the projects I've worked on ever since the beginning of my studies.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The soon-to-be responsive website feature six pages :
+- A home page featuring a brief introduction and a navigation carousel
+- An about me page explaining my motivation for becoming a web developer and talking about my interests
+- A projects page summarizing the several projects I've worked on over the years, including web development
+- An education page summarizing the degrees I've earned in computer science
+- An experience page summarizing the 9 months of professional work I've done for research laboratories and companies
+- A contact page where recruiters can reach out to me using my contact information
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Navigation is made easier thanks to a navigation menu available at all times, as well as a theme toggle for comfortable browsing.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Getting started
+
+The website's purpose being a personal portfolio, the website is not to be built, deployed and ran by unauthorzied parties.
