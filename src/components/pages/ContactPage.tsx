@@ -4,7 +4,6 @@ import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
 import ContactButton from "../ContactButton.tsx";
 import {faPhone} from "@fortawesome/free-solid-svg-icons";
-import type {PhoneIconDefinition} from "../../assets/config/PhoneIconDefinition.ts";
 
 function ContactPage() {
 
@@ -26,7 +25,7 @@ function ContactPage() {
           <ContactButton baseHref={"https://www.linkedin.com/in/"} contactType={"linkedin"}
                          icon={faLinkedin} isWebsite={true}/>
           <ContactButton baseHref={"mailto:"} contactType={"email"} icon={faEnvelope} />
-          <ContactButton baseHref={"tel:"} contactType={"phone"} icon={faPhone as PhoneIconDefinition}/>
+          <ContactButton baseHref={"tel:"} contactType={"phone"} icon={faPhone}/>
         </div>
         <br/>
       </div>

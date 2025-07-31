@@ -2,12 +2,11 @@ import '../stylesheets/ContactButton.css';
 import type {IconDefinition, IconProp} from "@fortawesome/fontawesome-svg-core";
 import {contactInfo} from "../assets/ContactInfo.ts";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import type {PhoneIconDefinition} from "../assets/config/PhoneIconDefinition.ts";
 
 interface ContactButtonProps {
   baseHref: string,
   contactType: string,
-  icon?: IconDefinition | PhoneIconDefinition,
+  icon?: IconDefinition,
   isWebsite?: boolean;
 }
 
