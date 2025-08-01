@@ -43,6 +43,7 @@ nav {
     padding: 1rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     box-shadow: 0 0 1rem 1rem var(--nav-color);
 }
 
@@ -101,3 +102,31 @@ h1 {
     align-items: center;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 1400px) {
+    .contacts {
+        flex-direction: column;
+        justify-content: unset;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #page-content {
+        padding-left: unset;
+        padding-right: unset;
+    }
+    #page-info {
+        box-shadow: unset;
+    }
+    #homepage-carousel {
+        width: unset;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #homepage-carousel {
+        width: 80%;
+    }
+}
+
+/* TODO ajouter query pour navbar à 860px (faire un menu hamburger) */
