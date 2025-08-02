@@ -57,6 +57,53 @@ nav a:hover {
     color: #C0D0F8;
 }
 
+.hamburger {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hamburger div {
+    border-radius: 0.125rem;
+    width: 2rem;
+    height: 0.25rem;
+    background-color: white;
+    margin-top: 0.250rem;
+    margin-bottom: 0.250rem;
+}
+
+.mobile {
+    position: fixed;
+    padding: unset;
+    top: 5rem;
+    left: 1rem;
+    width: fit-content;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 0 1rem 1rem var(--nav-color);
+    overflow: hidden;
+}
+
+.mobile a {
+    width: 100%;
+    border-radius: unset;
+    text-align: left;
+}
+
+.mobile a:not(.selected) {
+    background-color: var(--nav-color);
+    border: var(--nav-color) 1px solid;
+}
+
+.mobile .selected {
+    box-shadow: unset;
+    border: #B8B8B8 1px solid;
+}
+
 h1 {
     font-size: 3.5rem;
     text-align: center;
@@ -128,5 +175,3 @@ h1 {
         width: 80%;
     }
 }
-
-/* TODO ajouter query pour navbar à 860px (faire un menu hamburger) */

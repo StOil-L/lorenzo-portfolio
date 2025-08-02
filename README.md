@@ -14,7 +14,7 @@ As such, this portfolio is my entryway to show to recruiters who I am, what I've
 
 ## Features
 
-The soon-to-be responsive website feature six pages :
+The responsive website feature six pages :
 - A home page featuring a brief introduction and a navigation carousel
 - An about me page explaining my motivation for becoming a web developer and talking about my interests
 - A projects page summarizing the several projects I've worked on over the years, including web development
