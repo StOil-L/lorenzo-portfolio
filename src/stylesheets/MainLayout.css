@@ -65,6 +65,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .hamburger div {
@@ -74,6 +75,14 @@ nav a:hover {
     background-color: white;
     margin-top: 0.250rem;
     margin-bottom: 0.250rem;
+}
+
+.hamburger.open {
+    background-color: white;
+}
+
+.hamburger.open div {
+    background-color: var(--nav-color);
 }
 
 .mobile {

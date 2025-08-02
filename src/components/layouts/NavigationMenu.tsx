@@ -58,7 +58,8 @@ function NavigationMenu() {
     <>
       <nav>
         {hamburgerMenuDisplay? (
-          <div className="hamburger" onClick={() => openHamburgerMenu(!hamburgerMenu)}>
+          <div className={`hamburger${hamburgerMenu? " open" : ""}`}
+               onClick={() => openHamburgerMenu(!hamburgerMenu)}>
             <div></div>
             <div></div>
             <div></div>
