@@ -1,6 +1,6 @@
 {
   "name": "lorenzo-portfolio",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "homepage": "https://stoil-l.github.io/lorenzo-portfolio",
   "type": "module",
