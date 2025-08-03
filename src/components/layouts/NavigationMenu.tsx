@@ -3,7 +3,7 @@ import DarkModeToggle from "./DarkModeToggle.tsx";
 import {getCookie, setPageCookie} from "../../util/cookies.ts";
 import {useContext, useEffect, useState} from "react";
 import {isHrefMatching} from "../../util/misc.ts";
-import {siteRouteIds, siteRouteNames} from "../../assets/config/SiteRoutes.ts";
+import {indexRoute, siteRouteIds, siteRouteNames} from "../../assets/config/SiteRoutes.ts";
 import {AuthorizedCookies, type ContextState, CurrentPage} from "../../util/contexts.ts";
 
 function NavigationMenu() {
@@ -18,7 +18,8 @@ function NavigationMenu() {
   const navigationRoutes = (
     <>
       {siteRouteIds.map((routeId, index) => {
-        return <Link key={index} id={routeId} className={isHrefMatching(routeId) ? "selected" : ""}
+        return <Link key={index} id={routeId === indexRoute ? "" : routeId}
+                     className={isHrefMatching(routeId) ? "selected" : ""}
                      to={routeId} onClick={() => currentPageValue.action!(routeId)}>
           {siteRouteNames[index]}
         </Link>

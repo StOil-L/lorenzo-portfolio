@@ -13,11 +13,11 @@ export const AuthorizedCookies = createContext<ContextState<number>>({
 })
 
 export const CurrentPage = createContext<ContextState<string>>({
-  state: "",
+  state: "/",
 })
 
 export const acContextInitialState =
   getCookie("cookiesaccept") === undefined? 0 : (getCookie("cookiesaccept") === 'true' ? 1 : -1);
 export const cpContextInitialState =
   getCookie("currentpage") === undefined || !isHrefMatching(getCookie("currentpage") as string)?
-    "" : getCookie("currentpage") as string;
+    "/" : getCookie("currentpage") as string;

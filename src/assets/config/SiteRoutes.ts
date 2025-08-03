@@ -1,5 +1,7 @@
+export const indexRoute = "/lorenzo-portfolio/";
+
 export const siteRouteIds: string[] = [
-  "",
+  indexRoute,
   "aboutme",
   "projects",
   "education",

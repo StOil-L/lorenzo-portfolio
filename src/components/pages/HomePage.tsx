@@ -7,7 +7,7 @@ function HomePage() {
 
   return (
     <GenericPage header={{
-      imgsrc: "lorenzo-portfolio/photos/homepage.jpg",
+      imgsrc: "photos/homepage.jpg",
       children: "Lorenzo PUCCIO",
     }} route="">
       <div id="explanation">
