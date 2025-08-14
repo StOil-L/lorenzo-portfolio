@@ -3,7 +3,7 @@ import {projects} from "../summary/Projects.ts";
 
 export const homePageNavigation: CarouselSlideProps[] = [
   {
-    imgurl: "photos/Photo_CV_Juillet2025.jpg",
+    imgurl: "photos/Photo_CV_Juillet2025.webp",
     imgalt: "Photo de CV Lorenzo PUCCIO",
     title: "A propos de moi",
     description: "Je vous parle de moi plus en détail, dont mes intérêts et l'origine de ma motivation derrière mes choix de carrière.",
