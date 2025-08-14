@@ -22,13 +22,14 @@ function GenericPage(props: GenericPageProps) {
 
   return (
     <>
-      <PortfolioHeader imgsrc={props.header.imgsrc === ""? `photos/${props.route}.jpg` : props.header.imgsrc}
+      <PortfolioHeader imgsrc={props.header.imgsrc === ""? `photos/${props.route}.webp` : props.header.imgsrc}
                        imgalt={props.header.imgalt}>
         {props.header.children === ""? siteRoutes.get(props.route) as string : props.header.children}
       </PortfolioHeader>
       <div id="page-info-transition" />
       <div id="page-info">
         {props.children}
+        <br/>
       </div>
     </>
   )

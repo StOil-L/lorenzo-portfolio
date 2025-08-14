@@ -7,7 +7,7 @@ function HomePage() {
 
   return (
     <GenericPage header={{
-      imgsrc: "photos/homepage.jpg",
+      imgsrc: "photos/homepage.webp",
       children: "Lorenzo PUCCIO",
     }} route="">
       <div id="explanation">
@@ -22,10 +22,9 @@ function HomePage() {
         <p><b>Explorez les différentes catégories de mon portfolio en utilisant la barre de navigation au sommet de la page ou en utilisant les liens présents dans le carousel d'images ci-dessous :</b></p>
         <center>
           <div id="homepage-carousel">
-            <CarouselWrapper slides={homePageNavigation} />
+            <CarouselWrapper slides={homePageNavigation} autoScroll={true} />
           </div>
         </center>
-        <br />
       </div>
     </GenericPage>
   )
