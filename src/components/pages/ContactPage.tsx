@@ -27,7 +27,6 @@ function ContactPage() {
           <ContactButton baseHref={"mailto:"} contactType={"email"} icon={faEnvelope} />
           <ContactButton baseHref={"tel:"} contactType={"phone"} icon={faPhone}/>
         </div>
-        <br/>
       </div>
     </GenericPage>
   )
