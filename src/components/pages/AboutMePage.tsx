@@ -59,7 +59,8 @@ function AboutMePage() {
                   {i == 0 && <div className='summary-transition' />}
                   <Interest id={interest.id} name={interest.name} paragraphs={interest.paragraphs}
                             slides={interest.slides} isAlt={i % 2 == 0} />
-                  {i < interests.length-1 && <div className={`summary-transition${i % 2 == 0 ? ' alt' : ''}`} />}
+                  {(i < interests.length-1 || (i < interests.length && i % 2 == 0)) &&
+                      <div className={`summary-transition${i % 2 == 0 ? ' alt' : ''}`} />}
                 </div>
               )
             })}

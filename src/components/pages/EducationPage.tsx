@@ -20,7 +20,8 @@ function EducationPage() {
                                 technologies={edu.technologies} results={edu.results}
                                 obtentionDate={edu.obtentionDate} link={edu.link}
                                 isAlt={i % 2 == 0} />
-              {i < education.length-1 && <div className={`summary-transition${i % 2 == 0 ? ' alt' : ''}`} />}
+              {(i < education.length-1 || (i < education.length && i % 2 == 0)) &&
+                  <div className={`summary-transition${i % 2 == 0 ? ' alt' : ''}`} />}
             </div>
           )
         })}

@@ -20,7 +20,8 @@ function ExperiencePage() {
                                  tasks={exp.tasks} technologies={exp.technologies}
                                  startDate={exp.startDate} endDate={exp.endDate}
                                  link={exp.link} isAlt={i % 2 == 0} />
-              {i < experience.length-1 && <div className={`summary-transition${i % 2 == 0 ? ' alt' : ''}`} />}
+              {(i < experience.length-1 || (i < experience.length && i % 2 == 0)) &&
+                  <div className={`summary-transition${i % 2 == 0 ? ' alt' : ''}`} />}
             </div>
           )
         })}
