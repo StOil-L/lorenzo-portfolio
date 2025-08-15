@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b gh-pages"
+    "deploy": "gh-pages -d dist -b newpages"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
