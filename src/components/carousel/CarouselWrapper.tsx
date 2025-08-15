@@ -15,12 +15,15 @@ interface CarouselWrapperProps {
 
 function CarouselWrapper(props: CarouselWrapperProps) {
 
+  const selfRef = useRef<HTMLDivElement>(null);
   const slidesRef = useRef<HTMLDivElement[]>([]);
   const dotsRef = useRef<HTMLSpanElement[]>([]);
   const intervalRef = useRef(0);
   const [isStopped, setIsStopped] = useState(false);
   const currentSlide = useRef(0);
   const [currentSlideContent, setCurrentSlideContent] = useState(props.slides[0]);
+  const [displayControls, setDisplayControls] = useState(true);
+  const [displaySideOnRight, setDisplaySideOnRight] = useState(false);
   const startX = useRef(-1);
   const endX = useRef(-1);
 
@@ -40,6 +43,7 @@ function CarouselWrapper(props: CarouselWrapperProps) {
                        link={currentSlideContent.link} />
   )
 
+  // Gestion du scrolling automatique
   useEffect(() => {
     if(!isStopped && props.autoScroll) intervalRef.current = setInterval(() => {
       slideTo(++currentSlide.current)
@@ -47,6 +51,7 @@ function CarouselWrapper(props: CarouselWrapperProps) {
     return () => clearInterval(intervalRef.current)
   }, [isStopped])
 
+  // Attribution des refs + application transformation / background slides
   useEffect(() => {
     dotsRef.current.forEach((dot: HTMLSpanElement, i: number) => {
       dot.addEventListener('click', () => slideTo(i))
@@ -60,9 +65,32 @@ function CarouselWrapper(props: CarouselWrapperProps) {
     })
   }, []);
 
+  // Gestion de l'affichage des contrôles du carousel + affichage mode side pour responsivité
+  useEffect(() => {
+    const selfElement = selfRef.current;
+    if (!selfElement) return;
+    const observer = new ResizeObserver((entries) => {
+      if((entries[0].target as HTMLDivElement).offsetWidth < window.innerWidth*0.5) setDisplayControls(false);
+      else setDisplayControls(true);
+    })
+    observer.observe(selfElement);
+    for(let i = 0; i < slidesRef.current.length; i++) observer.observe(slidesRef.current[i]);
+    return () => observer.disconnect();
+  }, []);
+
+  // Gestion de l'ordre d'affichage en mode side (pour responsivité)
+  useEffect(() => {
+    const checkForQuery =
+      (event: MediaQueryListEvent | MediaQueryList) => setDisplaySideOnRight(event.matches);
+    const mediaQuery = window.matchMedia("screen and (max-width: 880px)");
+    if(mediaQuery.matches) checkForQuery(mediaQuery);
+    mediaQuery.addEventListener("change", checkForQuery);
+    return () => mediaQuery.removeEventListener("change", checkForQuery);
+  }, []);
+
   return props.slides.length > 0 && (
-    <div className="carousel-wrapper">
-      {props.textSide === 'left' && slidesText}
+    <div ref={selfRef} className="carousel-wrapper">
+      {(props.textSide === 'left' && !displaySideOnRight) && slidesText}
       <div className={`carousel${props.sideDisplay ? " side" : ""}`}
            onMouseEnter={() => setIsStopped(true)}
            onMouseLeave={() => setIsStopped(false)}
@@ -81,14 +109,16 @@ function CarouselWrapper(props: CarouselWrapperProps) {
                                   description={!props.sideDisplay ? slide.description : undefined} link={slide.link} />
           })}
         </div>
-        <div className="carousel-controls">
-          <button id="prev" onClick={() => slideTo(--currentSlide.current)}>
-            <FontAwesomeIcon icon={faCircleLeft} />
-          </button>
-          <button id="next" onClick={() => slideTo(++currentSlide.current)}>
-            <FontAwesomeIcon icon={faCircleRight} />
-          </button>
-        </div>
+        {displayControls && (
+          <div className="carousel-controls">
+            <button id="prev" onClick={() => slideTo(--currentSlide.current)}>
+              <FontAwesomeIcon icon={faCircleLeft} />
+            </button>
+            <button id="next" onClick={() => slideTo(++currentSlide.current)}>
+              <FontAwesomeIcon icon={faCircleRight} />
+            </button>
+          </div>
+        )}
         <div className="carousel-dots">
           {props.slides.map((_slide, i: number) => {
             const dotClass: string = i == currentSlide.current ? 'active' : 'inactive';
@@ -98,7 +128,7 @@ function CarouselWrapper(props: CarouselWrapperProps) {
           })}
         </div>
       </div>
-      {(props.textSide === 'right' || !props.textSide) && slidesText}
+      {(displaySideOnRight || props.textSide === 'right' || !props.textSide) && slidesText}
     </div>
   )
 }

@@ -3,7 +3,7 @@ header {
     align-items: center;
     justify-content: space-between;
     min-height: 100vh;
-    margin: 0 5% -4rem;
+    margin: 0 5% -10vh;
 }
 
 header h1 {
@@ -17,7 +17,10 @@ header h1 {
 }
 
 header img {
-    height: 100vh;
+    height: 100%;
+    max-height: 100vh;
+    max-width: 100%;
+    object-fit: contain;
     box-shadow: 0 0 4vw 0.25rem light-dark(black, white);
 }
 
@@ -33,5 +36,11 @@ header img {
     }
     header img {
         display: inline-block;
+    }
+}
+
+@media screen and (max-width: 1132px) {
+    header h1 {
+        font-size: 8vw;
     }
 }

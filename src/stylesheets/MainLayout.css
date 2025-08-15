@@ -152,17 +152,14 @@ h1 {
 }
 
 .contacts {
-    margin-left: 20%;
-    margin-right: 20%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-@media screen and (max-width: 1400px) {
-    .contacts {
-        flex-direction: column;
-        justify-content: unset;
+@media screen and (max-width: 1300px) {
+    #homepage-carousel {
+        width: 80%;
     }
 }
 
@@ -171,16 +168,30 @@ h1 {
         padding-left: unset;
         padding-right: unset;
     }
-    #page-info {
+    #page-info-transition, #page-info {
         box-shadow: unset;
     }
     #homepage-carousel {
         width: unset;
     }
+    .contacts {
+        flex-direction: column;
+        justify-content: unset;
+    }
 }
 
-@media screen and (max-width: 1300px) {
-    #homepage-carousel {
-        width: 80%;
+@media screen and (max-width: 768px) {
+    #cookies-notice {
+        flex-direction: column;
+        padding-top: unset;
+    }
+    #cookies-notice p {
+        line-height: unset;
+    }
+    .buttons {
+        justify-content: space-between;
+    }
+    .buttons button {
+        margin: 0 1vw;
     }
 }

@@ -34,3 +34,18 @@
     display: inline-block;
     margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 880px) {
+    .slide .text {
+        min-height: unset;
+        max-height: 45%;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: 0;
+        width: 100%;
+    }
+    .slide .text p {
+        line-height: unset;
+    }
+}
