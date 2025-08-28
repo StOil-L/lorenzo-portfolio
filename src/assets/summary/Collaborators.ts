@@ -21,12 +21,12 @@ const collabarray: CollaboratorProps[] = [
   {
     name: "Margaux Renoir",
     profilepage: 'https://www.linkedin.com/in/margaux-renoir-244479220/',
-    imgsrc: 'https://media.licdn.com/dms/image/v2/D4E03AQHuvSjbv8YTcg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1699823842639?e=1756339200&v=beta&t=xcGShUh8hhOAwpTpEW37jvD6PsC5f25XtkqrCsiWWt4',
+    imgsrc: 'collaborators/margaux.jpg',
   },
   {
     name: "Tom Simula",
     profilepage: 'https://www.linkedin.com/in/tom-simula-5039b8193/',
-    imgsrc: 'https://media.licdn.com/dms/image/v2/D4D03AQEIVfS8F6Ck_Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1697567060887?e=1756339200&v=beta&t=7wvZVgLVfFWhuJ5UVMfW-A7gfQjUmlkGROpamIeI2f4',
+    imgsrc: 'collaborators/tom.jpg',
   },
   {
     name: "Arthur Sapin",
