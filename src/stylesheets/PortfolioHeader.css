@@ -6,13 +6,15 @@ header {
     margin: 0 5% -10vh;
 }
 
-header h1 {
+header div {
+    max-width: 50%;
+}
+
+header div h1 {
     font-size: 6.25rem;
     line-height: 1.1;
     color: light-dark(black, white);
     text-align: left;
-    max-width: 50%;
-    overflow-wrap: break-word;
     text-shadow: 0.25rem 0.25rem 0.5rem light-dark(var(--dark-background-color), #B8B8B8);
 }
 
@@ -30,17 +32,13 @@ header img {
         flex-direction: column;
         justify-content: center;
     }
-    header h1 {
+    header div {
         max-width: 100%;
+    }
+    header div h1 {
         text-align: center;
     }
     header img {
         display: inline-block;
-    }
-}
-
-@media screen and (max-width: 1132px) {
-    header h1 {
-        font-size: 8vw;
     }
 }
