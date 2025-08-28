@@ -15,7 +15,7 @@ export function CarouselSlide (props: CarouselSlideProps) {
   return (
     <div ref={props.ref} className="slide">
       <img src={props.imgurl} alt={props.imgalt} />
-      {props.title && props.description && (
+      {props.title && (
         <CarouselSlideText title={props.title} description={props.description} link={props.link} />
       )}
     </div>
