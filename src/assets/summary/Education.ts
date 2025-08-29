@@ -5,7 +5,7 @@ import {ai, backend, database, devops, frontend, ide, language, os, sdk} from ".
 export const education: EducationSummaryProps[] = [
   {
     title: "Baccalauréat général scientifique",
-    imgsrc: "https://media.licdn.com/dms/image/v2/C4D0BAQGLcVtChMc3wA/company-logo_200_200/company-logo_200_200/0/1631364762862?e=1755734400&v=beta&t=h0fBiHaS7ax7pCED_eCUGYikJaKvApSGkzb6Uwrrfrk",
+    imgsrc: "education/mlk.jpg",
     school: "Lycée Martin Luther King",
     city: "Bussy-Saint-Georges",
     description: "",
@@ -16,13 +16,14 @@ export const education: EducationSummaryProps[] = [
     ] as TechnologyProps[],
     results: "14.20 / 20 de moyenne générale, mention Bien",
     obtentionDate: new Date(2019, 7, 22),
+    link: "https://www.lyceemlk.net/",
   },
   {
-    title: "Licence Informatique",
+    title: "Licence Informatique (CMI)",
     imgsrc: "https://sciences.edu.umontpellier.fr/files/2022/06/Faculte-des-Sciences-2022-RVB-scaled.jpg",
     school: "Faculté des Sciences",
     city: "Montpellier",
-    description: "La Licence informatique offre une formation générale en informatique équilibrée, tant sur les aspects théoriques et fondamentaux que sur les aspects appliqués et pratiques de l'informatique. Elle s'adresse aux étudiants souhaitant s'orienter vers des études longues en informatique en Master ou vers des études plus courtes en licence professionnelle.",
+    description: "La Licence informatique offre une formation générale en informatique équilibrée, tant sur les aspects théoriques et fondamentaux que sur les aspects appliqués et pratiques de l'informatique. Elle s'adresse aux étudiants souhaitant s'orienter vers des études longues en informatique en Master ou vers des études plus courtes en licence professionnelle. Cette formation est concernée par le Cursus Master en Ingénierie (CMI) du réseau Figure. Le CMI propose sur celle-ci une formation exigeante et renforcée en langue (passage du TOEIC), modules d'OSEC (management, innovation, communication), projets dès la L1 et stages obligatoires. Les activités de mise en situation (stages et projets) sont encadrées par les laboratoires porteurs du CMI ou les entreprises partenaires.",
     technologies: [
       language.get("C"),
       language.get("C++"),
@@ -38,27 +39,28 @@ export const education: EducationSummaryProps[] = [
       database.get("MySQL"),
       devops.get("Git"),
       devops.get("SonarQube Server"),
+      ide.get("Qt"),
       os.get("Linux"),
     ] as TechnologyProps[],
     results: "12 / 20 de moyenne générale, mention Assez Bien",
     obtentionDate: new Date(2022, 11, 9),
     link: "https://informatique-fds.edu.umontpellier.fr/etudiants/offre-de-formation-licence/"
   },
-  {
-    title: "Cursus Master en Ingénierie Informatique",
-    imgsrc: "https://reseau-figure.fr/_nuxt/logo-reseau-figure.HLtO9i_p.svg",
-    school: "Faculté des Sciences",
-    city: "Montpellier",
-    description: "Le Cursus Master en Ingénierie (CMI) Informatique s’appuie sur les enseignements de la Licence Informatique commune aux quatre parcours puis sur le Master Informatique. Le CMI propose sur les 5 ans une formation exigeante et renforcée en langue (passage du TOEIC), modules d'OSEC (management, innovation, communication), projets dès la L1 et stages obligatoires (52 semaines cumulées sur 5 ans). Les activités de mise en situation (stages et projets) sont encadrées par les laboratoires porteurs du CMI ou les entreprises partenaires.",
-    technologies: [
-      language.get("C++"),
-      language.get("LaTeX"),
-      devops.get("Git"),
-      ide.get("Qt"),
-    ] as TechnologyProps[],
-    results: "Formation inachevée à la fin du M1",
-    link: "https://informatique-fds.edu.umontpellier.fr/etudiants/cmi-informatique-cursus-master-en-ingenierie/"
-  },
+  // {
+  //   title: "Cursus Master en Ingénierie Informatique",
+  //   imgsrc: "https://reseau-figure.fr/_nuxt/logo-reseau-figure.HLtO9i_p.svg",
+  //   school: "Faculté des Sciences",
+  //   city: "Montpellier",
+  //   description: "Le Cursus Master en Ingénierie (CMI) Informatique s’appuie sur les enseignements de la Licence Informatique commune aux quatre parcours puis sur le Master Informatique. Le CMI propose sur les 5 ans une formation exigeante et renforcée en langue (passage du TOEIC), modules d'OSEC (management, innovation, communication), projets dès la L1 et stages obligatoires (52 semaines cumulées sur 5 ans). Les activités de mise en situation (stages et projets) sont encadrées par les laboratoires porteurs du CMI ou les entreprises partenaires.",
+  //   technologies: [
+  //     language.get("C++"),
+  //     language.get("LaTeX"),
+  //     devops.get("Git"),
+  //     ide.get("Qt"),
+  //   ] as TechnologyProps[],
+  //   results: "Formation inachevée à la fin du M1",
+  //   link: "https://informatique-fds.edu.umontpellier.fr/etudiants/cmi-informatique-cursus-master-en-ingenierie/"
+  // },
   {
     title: "Master Informatique Génie Logiciel",
     imgsrc: "https://sciences.edu.umontpellier.fr/files/2022/06/Faculte-des-Sciences-2022-RVB-scaled.jpg",
