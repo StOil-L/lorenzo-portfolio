@@ -91,7 +91,9 @@ export const projects: ProjectSummaryProps[] = [
   {
     title: 'Portfolio',
     description: 'Le site web sur lequel vous êtes en train de lire ce texte est mon portfolio. Il sert de point ' +
-      'd\'entrée aux recruteurs afin d\'en savoir plus sur moi, mes projets et mon expérience professionnelle.',
+      'd\'entrée aux recruteurs afin d\'en savoir plus sur moi, mes projets et mon expérience professionnelle. ' +
+      'Celui-ci a été réalisé avec la méthodologie LEAN en priorité, ce qui le rend dynamique au fur et à mesure de ' +
+      'mes expériences et projets réalisés.',
     technologies: [
       language.get("TypeScript"),
       frontend.get("React"),
