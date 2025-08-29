@@ -17,6 +17,8 @@
     display: flex;
     overflow: hidden;
     flex-wrap: nowrap;
+    border: 0 solid transparent;
+    border-radius: 1rem;
 }
 
 .carousel-controls {
@@ -30,7 +32,8 @@
 }
 
 .carousel-controls button {
-    padding: 10px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.75rem;
 }
 
 .carousel-dots {
