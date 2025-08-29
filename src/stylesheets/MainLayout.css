@@ -39,6 +39,9 @@ nav {
     z-index: 100;
     width: 100%;
     box-sizing: border-box;
+    border-bottom: 2px transparent solid;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
     background-color: var(--nav-color);
     padding: 1rem;
     display: flex;
@@ -213,6 +216,9 @@ h1 {
 
     .interest {
         max-width: 100%;
+    }
+    nav {
+        border-bottom-left-radius: unset;
     }
 }
 

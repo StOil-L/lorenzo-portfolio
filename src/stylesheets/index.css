@@ -31,7 +31,7 @@
 
   color-scheme: light dark;
   color: light-dark(var(--light-text-color), var(--dark-text-color));
-  background-color: light-dark(var(--light-background-color), var(--dark-background-color));
+  background-color: light-dark(#B8B8B8, black);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
