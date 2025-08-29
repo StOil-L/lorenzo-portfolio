@@ -48,23 +48,5 @@
 
 .carousel-wrapper .text {
     width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-@media screen and (max-width: 880px) {
-    .carousel-wrapper {
-        flex-direction: column;
-    }
-    .carousel.side {
-        width: 100%;
-    }
-    .carousel-dots {
-        bottom: unset;
-        top: 5%;
-    }
-    .carousel-wrapper .text {
-        width: 100%;
-        padding: unset;
-    }
+    padding: 0 1rem;
 }

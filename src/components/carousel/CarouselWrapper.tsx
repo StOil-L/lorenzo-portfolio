@@ -22,7 +22,6 @@ function CarouselWrapper(props: CarouselWrapperProps) {
   const [isStopped, setIsStopped] = useState(false);
   const currentSlide = useRef(0);
   const [currentSlideContent, setCurrentSlideContent] = useState(props.slides[0]);
-  const [displayControls, setDisplayControls] = useState(true);
   const [displaySideOnRight, setDisplaySideOnRight] = useState(false);
   const startX = useRef(-1);
   const endX = useRef(-1);
@@ -47,8 +46,8 @@ function CarouselWrapper(props: CarouselWrapperProps) {
   useEffect(() => {
     if(!isStopped && props.autoScroll) intervalRef.current = setInterval(() => {
       slideTo(++currentSlide.current)
-    }, 5000)
-    return () => clearInterval(intervalRef.current)
+    }, 10000) // 10 secondes
+    return () => clearInterval(intervalRef.current);
   }, [isStopped])
 
   // Attribution des refs + application transformation / background slides
@@ -65,16 +64,38 @@ function CarouselWrapper(props: CarouselWrapperProps) {
     })
   }, []);
 
-  // Gestion de l'affichage des contrôles du carousel + affichage mode side pour responsivité
+  // Gestion de l'affichage du carousel
   useEffect(() => {
     const selfElement = selfRef.current;
     if (!selfElement) return;
     const observer = new ResizeObserver((entries) => {
-      if((entries[0].target as HTMLDivElement).offsetWidth < window.innerWidth*0.5) setDisplayControls(false);
-      else setDisplayControls(true);
+      const wrapperRef = (entries[0].target as HTMLDivElement);
+      const isSmall = wrapperRef.offsetWidth < 768;
+      // direction du wrapper
+      wrapperRef.style.flexDirection = isSmall ? "column" : "row";
+      // largeur du carousel en sideDisplay
+      if ((wrapperRef.firstChild! as HTMLDivElement).className == "carousel side")
+        (wrapperRef.firstChild! as HTMLDivElement).style.width = isSmall ? "100%" : "50%";
+      // mise des points en haut pour éviter overlap avec texte en bas
+      (wrapperRef.firstChild!.lastChild! as HTMLDivElement).style.bottom = isSmall ? "unset" : "5%";
+      (wrapperRef.firstChild!.lastChild! as HTMLDivElement).style.top = isSmall ? "5%" : "unset";
+      // style de la zone de texte des slides
+      slidesRef.current.forEach((slide) => {
+        const textChild = slide.children[1] as HTMLDivElement;
+        textChild.style.minHeight = isSmall ? "unset" : "35%";
+        textChild.style.maxHeight = isSmall ? "45%" : "unset";
+        textChild.style.top = isSmall ? "unset" : "55%";
+        textChild.style.left = isSmall ? "unset" : "50%";
+        textChild.style.bottom = isSmall ? "0" : "unset";
+        textChild.style.width = isSmall ? "100%" : "45%";
+        textChild.style.padding = isSmall ? "unset" : "0 1rem";
+        const paragraphs = textChild.getElementsByTagName("p");
+        for (let i = 0; i < paragraphs.length; i++) {
+          paragraphs.item(i)!.style.lineHeight = isSmall ? "unset" : "2.25";
+        }
+      })
     })
     observer.observe(selfElement);
-    for(let i = 0; i < slidesRef.current.length; i++) observer.observe(slidesRef.current[i]);
     return () => observer.disconnect();
   }, []);
 
@@ -94,11 +115,15 @@ function CarouselWrapper(props: CarouselWrapperProps) {
       <div className={`carousel${props.sideDisplay ? " side" : ""}`}
            onMouseEnter={() => setIsStopped(true)}
            onMouseLeave={() => setIsStopped(false)}
-           onTouchStart={(event) => startX.current = event.touches[0].clientX}
+           onTouchStart={(event) => {
+             startX.current = event.touches[0].clientX;
+             setIsStopped(true);
+           }}
            onTouchEnd={(event) => {
              endX.current = event.changedTouches[0].clientX;
              if(startX.current > endX.current + 0.2*window.screen.width) slideTo(++currentSlide.current);
              else if(startX.current < endX.current - 0.2*window.screen.width) slideTo(--currentSlide.current);
+             setIsStopped(false);
            }}
       >
         <div className="carousel-content">
@@ -109,16 +134,14 @@ function CarouselWrapper(props: CarouselWrapperProps) {
                                   description={!props.sideDisplay ? slide.description : undefined} link={slide.link} />
           })}
         </div>
-        {displayControls && (
-          <div className="carousel-controls">
-            <button id="prev" onClick={() => slideTo(--currentSlide.current)}>
-              <FontAwesomeIcon icon={faCircleLeft} />
-            </button>
-            <button id="next" onClick={() => slideTo(++currentSlide.current)}>
-              <FontAwesomeIcon icon={faCircleRight} />
-            </button>
-          </div>
-        )}
+        <div className="carousel-controls">
+          <button id="prev" onClick={() => slideTo(--currentSlide.current)}>
+            <FontAwesomeIcon icon={faCircleLeft}/>
+          </button>
+          <button id="next" onClick={() => slideTo(++currentSlide.current)}>
+            <FontAwesomeIcon icon={faCircleRight}/>
+          </button>
+        </div>
         <div className="carousel-dots">
           {props.slides.map((_slide, i: number) => {
             const dotClass: string = i == currentSlide.current ? 'active' : 'inactive';
