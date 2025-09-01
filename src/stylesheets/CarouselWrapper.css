@@ -19,6 +19,7 @@
     flex-wrap: nowrap;
     border: 0 solid transparent;
     border-radius: 1rem;
+    box-shadow: 0 0 1rem light-dark(black, var(--light-background-color));
 }
 
 .carousel-controls {
@@ -34,6 +35,14 @@
 .carousel-controls button {
     padding: 0.25rem 0.5rem;
     border-radius: 0.75rem;
+    border-color: var(--dark-text-color);
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+}
+
+.carousel-controls button:hover {
+    border-color: var(--dark-link-hover-color);
+    color: var(--dark-link-hover-color);
 }
 
 .carousel-dots {

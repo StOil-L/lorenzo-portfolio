@@ -20,7 +20,8 @@
     min-height: 35%;
     display: flex;
     text-align: justify;
-    background-color: light-dark(rgba(255, 255, 255, 0.8), rgba(36, 36, 36, 0.8));
+    background-color: rgba(36, 36, 36, 0.8);
+    color: var(--dark-text-color);
     flex-wrap: wrap;
     overflow: auto;
 }
@@ -33,4 +34,9 @@
 .slide .text .margin-applier a {
     display: inline-block;
     margin-bottom: 1rem;
+    color: var(--dark-link-color);
+}
+
+.slide .text .margin-applier a:hover {
+    color: var(--dark-link-hover-color);
 }
