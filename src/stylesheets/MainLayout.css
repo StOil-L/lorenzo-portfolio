@@ -1,8 +1,7 @@
 #page-content {
     display: inline-block;
     text-align: justify;
-    padding-left: 6vw;
-    padding-right: 6vw;
+    padding: 0 clamp(2rem, 6vw, 6vw);
     box-sizing: border-box;
     width: 100%;
     background-color: light-dark(#B8B8B8, black);
@@ -30,7 +29,7 @@
 }
 
 #homepage-carousel {
-    width: 60%;
+    width: clamp(300px, 40%, 40%);
 }
 
 nav {
@@ -202,6 +201,12 @@ h1 {
 
 .interest h2 {
     text-align: center;
+    color: white;
+    text-shadow: 0.125rem 0.125rem 0.25rem var(--dark-background-color);
+}
+
+.interest .carousel-wrapper .carousel .carousel-content {
+    box-shadow: 0 0 0.5rem var(--light-background-color);
 }
 
 #interests-transition-in {
@@ -220,9 +225,9 @@ h1 {
     justify-content: space-evenly;
 }
 
-@media screen and (max-width: 1300px) {
-    #homepage-carousel {
-        width: 80%;
+@media screen and (min-width: 1025px) and (max-width: calc(1025px + 2*2rem)) {
+    #page-content {
+        padding: 0 calc(100vw - 1025px);
     }
 }
 
@@ -233,9 +238,6 @@ h1 {
     }
     #page-info-transition, #page-info {
         box-shadow: unset;
-    }
-    #homepage-carousel {
-        width: unset;
     }
     .contacts {
         flex-direction: column;
