@@ -20,7 +20,7 @@ export const homePageNavigation: CarouselSlideProps[] = [
     imgurl: "https://sciences.edu.umontpellier.fr/files/2022/06/Faculte-des-Sciences-2022-RVB-scaled.jpg",
     imgalt: "Logo de la Faculté des Sciences de Montpellier",
     title: "Formation",
-    description: "J'y renseigne les différentes formations que j'ai suivies et les diplômes que j'ai obtenus pendant ma vie.",
+    description: "J'y renseigne les différentes formations que j'ai suivies et les diplômes que j'ai obtenus à leur issue.",
     link: "/lorenzo-portfolio/education",
   },
   {
