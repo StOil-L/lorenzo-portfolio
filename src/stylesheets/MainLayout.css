@@ -37,7 +37,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    width: 100%;
+    width: calc(100% - 2*1rem);
     box-sizing: border-box;
     border-bottom: 2px transparent solid;
     border-bottom-left-radius: 3rem;
@@ -60,7 +60,35 @@ nav a {
 }
 
 nav a:hover {
-    color: #C0D0F8;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    color: white;
+    border-color: white;
+}
+
+nav .selected {
+    transition: box-shadow 0.25s;
+}
+
+nav .selected:hover {
+    color: var(--nav-color);
+    box-shadow: inset 2px 2px 0 var(--nav-color), inset -2px -2px 0 var(--nav-color),
+                inset -2px 2px 0 var(--nav-color), inset 2px -2px 0 var(--nav-color);
+}
+
+nav:not(.mobile) a:focus, nav:not(.mobile) a:focus-visible {
+    outline: 4px auto white;
+}
+
+nav button {
+    transition: border-color 0.25s, color 0.25s, box-shadow 0.25s;
+}
+
+nav button:hover {
+    color: var(--nav-color);
+    border-color: light-dark(var(--light-background-color), var(--dark-background-color));
+    box-shadow: inset 2px 2px 0 var(--nav-color), inset -2px -2px 0 var(--nav-color),
+                inset -2px 2px 0 var(--nav-color), inset 2px -2px 0 var(--nav-color);
 }
 
 .hamburger {
@@ -103,19 +131,24 @@ nav a:hover {
 }
 
 .mobile a {
-    width: 100%;
+    width: calc(100% - 2*1.2em);
+    border-top-color: var(--dark-background-color);
+    border-top-width: 2px;
     border-radius: unset;
     text-align: left;
 }
 
-.mobile a:not(.selected) {
-    background-color: var(--nav-color);
-    border: var(--nav-color) 1px solid;
+.mobile a:last-child {
+    border-bottom-width: 2px;
+    border-bottom-right-radius: 3rem;
 }
 
 .mobile .selected {
-    box-shadow: unset;
-    border: #B8B8B8 1px solid;
+    border-bottom-color: white;
+}
+
+nav:not(.mobile) {
+    margin: 0 1rem;
 }
 
 h1 {
@@ -221,10 +254,11 @@ h1 {
     }
     nav {
         border-bottom-left-radius: unset;
+        width: calc(100% - 1rem);
     }
-}
-
-@media screen and (max-width: 768px) {
+    nav:not(.mobile) {
+        margin-left: unset;
+    }
     #cookies-notice {
         flex-direction: column;
         padding-top: unset;

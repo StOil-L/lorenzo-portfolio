@@ -44,6 +44,7 @@ a {
   font-weight: bold;
   color: light-dark(var(--light-link-color), var(--dark-link-color));
   text-decoration: inherit;
+  transition: color 0.25s;
 }
 a:hover {
   color: light-dark(var(--light-link-hover-color), var(--dark-link-hover-color));
@@ -65,14 +66,13 @@ button {
   font-family: inherit;
   background-color: light-dark(var(--light-background-color), var(--dark-background-color));
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, color 0.25s;
 }
-button:hover {
+button:hover, a:hover {
   border-color: light-dark(var(--light-link-hover-color), var(--dark-link-hover-color));
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:focus, button:focus-visible {
+  outline: 4px auto var(--nav-color);
 }
 
 p, li {

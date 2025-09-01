@@ -20,7 +20,10 @@ function NavigationMenu() {
       {siteRouteIds.map((routeId, index) => {
         return <Link key={index} id={routeId === indexRoute ? "" : routeId}
                      className={isHrefMatching(routeId) ? "selected" : ""}
-                     to={routeId} onClick={() => currentPageValue.action!(routeId)}>
+                     to={routeId} onClick={() => {
+          currentPageValue.action!(routeId);
+          if(hamburgerMenu) openHamburgerMenu(false);
+        }}>
           {siteRouteNames[index]}
         </Link>
       })}
