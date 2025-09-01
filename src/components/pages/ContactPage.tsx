@@ -14,7 +14,8 @@ function ContactPage() {
     }} route="contact">
       <div id="explanation">
         <b>
-          <h3>Besoin d'un renseignement ou envie de faire un retour sur mon parcours ou mes réalisations ? Contactez-moi via les liens ci-dessous :</h3>
+          {/*<h3>Besoin d'un renseignement ou envie de faire un retour sur mon parcours ou mes réalisations ? Contactez-moi via les liens ci-dessous :</h3>*/}
+          <h3>Contactez-moi au sujet d'une opportunité, d'un renseignement ou d'une remarque sur mon parcours ou mes réalisations via les liens ci-dessous :</h3>
         </b>
         <div className="contacts">
           <ContactButton baseHref={"https://www.linkedin.com/in/"} contactType={"linkedin"}
