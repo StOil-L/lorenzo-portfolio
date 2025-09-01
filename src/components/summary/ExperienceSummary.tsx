@@ -1,6 +1,7 @@
 import Technology, {type TechnologyProps} from "./Technology.tsx";
 import Task, {type TaskProps} from "./Task.tsx";
 import {displayDate} from "../../util/misc.ts";
+import {useEffect, useRef} from "react";
 
 export interface ExperienceSummaryProps {
   title: string,
@@ -17,6 +18,20 @@ export interface ExperienceSummaryProps {
 }
 
 function ExperienceSummary(props: ExperienceSummaryProps) {
+
+  const technoRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observableTechnos = technoRef.current;
+    if(!observableTechnos) return;
+    const observer = new ResizeObserver((entries) => {
+      const technoElement = (entries[0].target as HTMLDivElement);
+      technoElement.style.justifyContent = technoElement.offsetHeight > 80? "space-evenly" : "flex-start";
+    })
+    observer.observe(observableTechnos);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className={`summary${props.isAlt ? ' alt' : ''}`}>
       <section>
@@ -42,7 +57,7 @@ function ExperienceSummary(props: ExperienceSummaryProps) {
       {props.technologies && (
         <>
           <h3>Environnement</h3>
-          <div className="technologies">
+          <div ref={technoRef} className="technologies">
             {props.technologies.map((technology: TechnologyProps, i: number) => {
               return <Technology key={i} name={technology.name} icon={technology.icon}
                                  color={technology.color} highlight={technology.highlight} />

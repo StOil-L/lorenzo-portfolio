@@ -1,5 +1,6 @@
 import Technology, {type TechnologyProps} from "./Technology.tsx";
 import {displayDate} from "../../util/misc.ts";
+import {useEffect, useRef} from "react";
 
 export interface EducationSummaryProps {
   title: string,
@@ -15,6 +16,20 @@ export interface EducationSummaryProps {
 }
 
 function EducationSummary(props: EducationSummaryProps) {
+
+  const technoRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observableTechnos = technoRef.current;
+    if(!observableTechnos) return;
+    const observer = new ResizeObserver((entries) => {
+      const technoElement = (entries[0].target as HTMLDivElement);
+      technoElement.style.justifyContent = technoElement.offsetHeight > 80? "space-evenly" : "flex-start";
+    })
+    observer.observe(observableTechnos);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className={`summary${props.isAlt ? ' alt' : ''}`}>
       <section>
@@ -35,7 +50,7 @@ function EducationSummary(props: EducationSummaryProps) {
       {props.technologies && (
         <>
           <h3>Technologies enseignées</h3>
-          <div className="technologies">
+          <div ref={technoRef} className="technologies">
             {props.technologies.map((technology: TechnologyProps, i: number) => {
               return <Technology key={i} name={technology.name} icon={technology.icon}
                                  color={technology.color} highlight={technology.highlight} />

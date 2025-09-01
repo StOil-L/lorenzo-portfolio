@@ -15,8 +15,8 @@
 .summary a:not(.profilepage) {
     margin-top: 1.5rem;
     display: inline-block;
-    border-radius: 8px;
-    padding: 0.6em 1.2em;
+    border-radius: 2.2rem;
+    padding: 0.6rem 1.2rem;
     color: light-dark(var(--dark-text-color), var(--light-text-color));
     background-color: light-dark(var(--dark-background-color), var(--light-background-color));
     cursor: pointer;
@@ -63,12 +63,6 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-}
-
-@media screen and (max-width: 1024px) {
-    .technologies {
-        justify-content: space-evenly;
-    }
 }
 
 @media screen and (max-width: 768px) {
