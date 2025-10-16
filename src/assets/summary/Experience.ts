@@ -25,22 +25,16 @@ export const experience: ExperienceSummaryProps[] = [
     endDate: new Date(2021, 6, 1),
   },
   {
-    title: "Développeur logiciel",
+    title: "Développeur logiciel - Go",
     imgsrc: "https://www.umontpellier.fr/wp-content/uploads/2014/07/LogoLIRMMlong.jpg",
     company: "LIRMM",
     city: "Montpellier",
-    mission: "Développement du plugin Rocq pour le prouveur automatique Goéland",
+    mission: "mplémentation d’un plugin d’interprétation vers le prouveur manuel Rocq pour le prouveur automatique " +
+      "Goéland",
     tasks: [
       {
-        task: "Compréhension de la méthode des tableaux sémantiques via littérature scientifique et prouveur Zenon",
-      },
-      {
-        task: "Première implémentation du plugin Rocq",
-        subtasks: [
-          {
-            task: "Règles couvertes : règles de fermeture, règles analytiques, gamma-règles",
-          },
-        ] as TaskProps[]
+        task: "Interprétation de 80% des règles de la méthode des tableaux sémantiques : règles de fermeture, règles " +
+          "analytiques, gamma-règles",
       },
     ] as TaskProps[],
     technologies: [
@@ -54,21 +48,21 @@ export const experience: ExperienceSummaryProps[] = [
     link: "https://github.com/StOil-L/Goeland-Coq-plugin",
   },
   {
-    title: "Ingénieur logiciel",
+    title: "Ingénieur logiciel - Java Spring / JavaScript React",
     imgsrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/CGI_logo.svg/2560px-CGI_logo.svg.png",
     company: "CGI",
     city: "Castelnau-le-Lez",
-    mission: "Intervention auprès d'un client du domaine bancaire selon les méthodes Agiles (Kanban, Scrum)",
+    mission: "Préparation de la migration cloud d’un portefeuille applicatif bancaire afin de réduire les coûts de " +
+      "maintenance d’infrastructure client (Agile : Scrum, Kanban) :",
     tasks: [
       {
-        task: "Réduction de la dette technique sur une application de batch processing selon les exigences qualité " +
-          "client",
+        task: "Réduction de la dette technique d’une application de microservices de batch processing",
         subtasks: [
           {
-            task: "8 jobs de batch processing obsolètes décommissionnés selon la spécification projet",
+            task: "décommissionnement de 8 jobs obsolètes",
           },
           {
-            task: "97.5% de retours bloquants remontés par SonarQube Server corrigés",
+            task: "résolution de 97,5 % des retours SonarQube selon la conformité qualité client",
           },
           {
             task: "Environnement : Java 8, Spring Batch, Spring Boot, SonarQube Server, Hibernate, PostreSQL, " +
@@ -77,16 +71,13 @@ export const experience: ExperienceSummaryProps[] = [
         ] as TaskProps[],
       },
       {
-        task: "Migration d'une application de gestion des relations client",
+        task: "Modernisation d’une application de gestion de la relation client",
         subtasks: [
           {
-            task: "3 webservices migrés avec une implémentation asynchrone plus performante",
+            task: "Migration de 3 webservices REST / SOAP et optimisation des performances par programmation concurrente",
           },
           {
-            task: "Refonte graphique, logique et technique d'une page web du front-end",
-          },
-          {
-            task: "Compilation / déploiement d'une nouvelle image",
+            task: "Refonte du front-end (AngularJS à React) avec intégration du design system client",
           },
           {
             task: "Environnement : Java 17, Spring Boot, API REST, webservices SOAP, JavaScript, React, Redux, " +
